@@ -10,15 +10,18 @@
             </ul>
 
         </div>
-        <div class="add w-1/6 h-24 bg-red-400 flex justify-start items-center rounded-tl-3xl rounded-bl-3xl pl-4 ">
+        <div class="add  absolute right-0 z-30">
+        <div class="w-[250px] h-24 z-auto bg-red-400 flex justify-start items-center rounded-tl-full rounded-bl-full pl-4">
             <div
-                class="logo w-14 h-14 rounded-full bg-white shadow-lg border-4 border-red-200 flex justify-center items-center">
+                class="logo w-14 h-14 rounded-full bg-white shadow-lg border-4 border-red-300 flex justify-center items-center">
                 <i class="bi bi-telephone text-2xl font-bold p-2 text-red-500 "></i>
             </div>
             <div class="block pl-2">
                 <h3 class="text-sm font-normal uppercase py-1"> Support & Order</h3>
                 <span class="text-xl font-light">01674345763</span>
             </div>
+        </div>
+            
         </div>
     </div>
 </template>

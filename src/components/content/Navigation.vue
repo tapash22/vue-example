@@ -1,5 +1,5 @@
 <template>
-    <div class="navigation p-0 m-0">
+    <div class="navigation ">
         <nav class="nav">
             <ul class="ul">
                 <li class="li">

@@ -1,16 +1,47 @@
 <template>
     <div class="home relative">
         <div class="home1 bg-fixed flex justify-center items-center h-[450px] opacity-90 bg-center ">
-            <p class="w-1/2 text-justify">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. In natus quis quos repellat, beatae aperiam
-                reiciendis expedita quo earum laboriosam odio repellendus neque, magnam maiores dolore quam quae quibusdam
-                fugiat iste necessitatibus corrupti? Quidem voluptate deleniti fugit illum dolore beatae repellat obcaecati
-                autem, eligendi quae commodi quos quisquam impedit repudiandae distinctio facilis, non nesciunt ipsum alias
-                velit? Quibusdam, quia pariatur itaque perferendis blanditiis sapiente, corrupti soluta ratione fugiat
-                consequuntur dignissimos maxime molestiae consectetur! Nostrum tempore odit veritatis deserunt dignissimos
-                modi repudiandae at ea voluptatem. Consectetur nulla quis fuga blanditiis dolor voluptatum ex, molestias
-                voluptas. Consequatur quasi fuga quas, nobis 
-            </p>
+            <div class="w-3/4 block">
+                <h2 class="text-4xl font-semibold tracking-widest py-4 uppercase text-center text-red-400">Select your
+                    vehicle</h2>
+                <div class="search flex gap-2 justify-start w-full mb-10">
+                    <div class="h-14 px-2 bg-white items-center w-3/12">
+                        <select class="h-full w-full bg-white text-lg font-medium tracking-wider text-center">
+                            <option selected class="border-b-2 border-gray-400"> Select year</option>
+                            <option value="1" >One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="h-14 px-2 bg-white items-center w-3/12">
+                        <select class="h-full w-full bg-white text-lg font-medium tracking-wider text-center ">
+                            <option selected>Select Brand</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="h-14 px-2 bg-white items-center w-3/12">
+                        <select class="h-full w-full bg-white text-lg font-medium tracking-wider text-center ">
+                            <option selected> Select Model</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="h-14 flex justify-center  bg-red-400 w-1/12">
+                        <button class="bg-red-400 h-full text-lg font-medium tracking-wider text-center ">GO</button>
+                    </div>
+                </div>
+                <div class="tag flex justify-center mt-5">
+                    <div class="w-2/3 flex justify-evenly">
+                        <a href="#" class="text-xl text-red-400 font-medium tracking-wide">Shop By Product</a>
+                    <span class="font-semibold text-xl text-red-400">|</span>
+                    <a href="#" class="text-xl text-red-400 font-medium tracking-wide">Shop By Brand</a>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
         <div class="bg-white">
             <p>
@@ -53,14 +84,15 @@
                 expedita reprehenderit exercitationem. Tempore, incidunt fuga est provident blanditiis doloribus, inventore
                 ipsum reprehenderit tenetur vitae et? Quia veritatis beatae, ex consequatur ullam sequi iusto ipsa. Tempore,
                 atque dolore dicta quasi fugit commodi eos, repudiandae minima inventore tempora nisi! Nulla nesciunt veniam
-            suscipit perferendis sint at odio corrupti cumque commodi in expedita aliquam vitae voluptatem magnam iste
-            obcaecati, sequi iusto velit totam placeat ex! Aliquam accusamus voluptatem et, vel alias laboriosam
-            assumenda quo, doloremque reiciendis odio tenetur praesentium voluptates eum? Eum nisi distinctio quaerat
-            culpa at est eveniet quam ipsam quasi consequatur. Quis eos illo eum nihil magnam quae sed! Velit, at
-            doloremque quo porro, tempora magnam sequi, beatae saepe qui quia facilis?
-        </p>
+                suscipit perferendis sint at odio corrupti cumque commodi in expedita aliquam vitae voluptatem magnam iste
+                obcaecati, sequi iusto velit totam placeat ex! Aliquam accusamus voluptatem et, vel alias laboriosam
+                assumenda quo, doloremque reiciendis odio tenetur praesentium voluptates eum? Eum nisi distinctio quaerat
+                culpa at est eveniet quam ipsam quasi consequatur. Quis eos illo eum nihil magnam quae sed! Velit, at
+                doloremque quo porro, tempora magnam sequi, beatae saepe qui quia facilis?
+            </p>
+        </div>
     </div>
-</div></template>
+</template>
 
 <script>
 export default {
@@ -68,6 +100,8 @@ export default {
 }
 </script>
 
-<style scoped>.home1 {
-    background-image: url('@/assets/car.jpg');
-}</style>
+<style scoped>
+.home1 {
+    background-image: url('@/assets/car2.jpg');
+}
+</style>
