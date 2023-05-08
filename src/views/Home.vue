@@ -91,11 +91,43 @@
         <!-- best seller -->
         <div class="bg-white p-5 w-full h-full container">
             <h2 class="text-xl font-bold text-center mb-3">Best hier for You</h2>
-            <TopSeller :carLists="carLists"/>
-            
+            <TopSeller :carLists="carLists" />
+
         </div>
 
         <!-- best seller end -->
+
+        <!-- must have for every car -->
+        <div class="bg-gray-200 p-5 w-full h-full container">
+            <h2 class="text-xl font-bold text-center mb-3">Must have for every car</h2>
+            <div class="flex justify-center">
+                <p class="text-sm font-normal mb-3 text-center w-1/2">Enjoy an entirely new level of driving experience with
+                    our in-depth selection of superior car bulbs, brake
+                    pads,
+                    spark plugs, and other azirspares parts and accessories designed to
+                    keep your car running at its absolute best
+                </p>
+            </div>
+            
+                <div class="flex justify-start gap-2">
+                <div class="card" v-for="part in parts" :key="part.id">
+                    <!-- <router-link :to="{ name: 'carDetails', params: { id: carList.id } }"> -->
+                        <div class="card-body h-60 w-full p-0 overflow-hidden">
+                            <img :src="part.image" class="h-full w-full" />
+                        </div>
+                    <!-- </router-link> -->
+                    <div class="card-text w-full h-auto p-2 py-2">
+                        <h3 class="uppercase text-sm font-bold my-1 ">{{ part.name }}</h3>
+                        <!-- <p class="text-sm font-light my-1 text-red-900">{{ carList.ownerName }} | {{ carList.phone }}</p>
+                        <p class="text-sm font-light my-1">{{ carList.model }}</p>
+                        <p class="text-lg font-semibold my-2">Tk. {{ carList.price }}/day</p> -->
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        <!-- must have for every car end -->
 
 
     </div>
@@ -208,11 +240,44 @@ export default {
                     perKmCost: 8,
                 }
 
+            ],
+
+            parts: [
+                {
+                    id: 1,
+                    name: 'Brake Pads',
+                    image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                },
+                {
+                    id: 2,
+                    name: 'Air Filter',
+                    image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                },
+                {
+                    id: 3,
+                    name: 'Moto Oils',
+                    image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                },
+                {
+                    id: 4,
+                    name: 'Custom Wheel',
+                    image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                },
+                // {
+                //     id: 5,
+                //     name: 'Exhaust System',
+                //     image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                // },
+                // {
+                //     id: 6,
+                //     name: 'Steel Wheel',
+                //     image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                // }
             ]
         }
     },
 
-    components:{
+    components: {
         Category,
         TopSeller,
     }
