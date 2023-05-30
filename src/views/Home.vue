@@ -108,13 +108,13 @@
                     keep your car running at its absolute best
                 </p>
             </div>
-            
-                <div class="flex justify-start gap-2">
+
+            <div class="flex justify-start gap-2">
                 <div class="card" v-for="part in parts" :key="part.id">
                     <!-- <router-link :to="{ name: 'carDetails', params: { id: carList.id } }"> -->
-                        <div class="card-body h-60 w-full p-0 overflow-hidden">
-                            <img :src="part.image" class="h-full w-full" />
-                        </div>
+                    <div class="card-body h-60 w-full p-0 overflow-hidden">
+                        <img :src="part.image" class="h-full w-full" />
+                    </div>
                     <!-- </router-link> -->
                     <div class="card-text w-full h-auto p-2 py-2">
                         <h3 class="uppercase text-sm font-bold my-1 ">{{ part.name }}</h3>
@@ -124,10 +124,30 @@
                     </div>
                 </div>
             </div>
-            
+
 
         </div>
         <!-- must have for every car end -->
+
+        <!-- banner -->
+        <div class="bg-gray-200 p-5 w-full h-full container">
+            <div class="box p-3 bg-gray-300 h-[200]">
+                <h3 class="text-3xl text-yellow-200 text-center py-5">
+                    Get 20% off for your order
+                </h3>
+            </div>
+        </div>
+
+        <!-- banner end -->
+
+        <div class="bg-gray-200 p-5 w-full h-full container">
+            <h2 class="text-xl font-bold text-center mb-3">Must have for every car</h2>
+            <div class="flex justify-center">
+                <Carousel />
+            </div>
+        </div>
+
+
 
 
     </div>
@@ -136,6 +156,7 @@
 <script>
 import TopSeller from '@/components/seller/TopSeller.vue';
 import Category from '../components/category/Category.vue';
+import Carousel from '../components/carousel/Carousel.vue';
 
 export default {
     data() {
@@ -280,6 +301,7 @@ export default {
     components: {
         Category,
         TopSeller,
+        Carousel
     }
 
 }

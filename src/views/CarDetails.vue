@@ -52,7 +52,7 @@
         </div>
 
         <!-- rating end -->
-        <div>
+        <div class="mb-4">
           <ul>
             <li class="text-yellow-400 text-lg font-normal ">
               <i class="bi bi-check text-yellow-400 text-3xl font-semibold" ></i> In Stock
@@ -67,8 +67,8 @@
         </div>
 
         <div class="block">
-          <button lass="bg-gray-400 text-yellow-400 text-lg uppercase w-1/2 h-10">Add To Card</button>
-          <button class="bg-yellow-400 text-white text-lg uppercase w-1/2 h-10 ">Buy IT NOW</button>
+          <button class="bg-gray-400 text-yellow-400 text-lg uppercase mb-2 w-full h-10">Add To Card</button>
+          <button class="bg-yellow-400 text-white text-lg uppercase w-full h-10 ">Buy IT NOW</button>
         </div>
       </div>
     <div class="color h-[100vh]  w-1/4 flex justify-center items-center">
