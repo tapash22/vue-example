@@ -130,12 +130,15 @@
         <!-- must have for every car end -->
 
         <!-- banner -->
-        <div class="bg-gray-200 p-5 w-full h-full container">
-            <div class="box p-3 bg-gray-300 h-[200]">
-                <h3 class="text-3xl text-yellow-200 text-center py-5">
+        <div class=" p-5 w-full h-full container">
+            <div class="box p-3 bg-black h-[200] flex opacity-90 rounded-lg">
+                <h3 class="text-4xl font-bold text-white text-center mt-72 w-1/2">
                     Get 20% off for your order
                 </h3>
+                <img src="https://i.ibb.co/Ks3VZYX/vector-car-png-favpng-gpin-VUFdw-Jp91d2ih-TCQu1-Ww-S-removebg-preview.png"
+                    class="w-1/2  h-full" />
             </div>
+            
         </div>
 
         <!-- banner end -->
@@ -146,9 +149,6 @@
                 <Carousel />
             </div>
         </div>
-
-
-
 
     </div>
 </template>
