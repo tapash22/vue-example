@@ -88,6 +88,27 @@
         </div>
         <!-- category end -->
 
+
+        <!-- banner -->
+
+        <div class=" p-5 w-full h-full container">
+            <div class="box p-3 bg-black h-[200] flex opacity-90 rounded-lg">
+                <h3 class="text-4xl font-bold text-white text-center my-auto w-1/2">
+                    Get 20% off for your order
+                    <br />
+                    <small class="text-xs font-thin text-green-300 line-clamp-3 w-1/2 mt-3 text-center ml-32">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloremque, repudiandae quam quos
+                        exercitationem
+                    </small>
+                </h3>
+                <img src="https://i.ibb.co/Ks3VZYX/vector-car-png-favpng-gpin-VUFdw-Jp91d2ih-TCQu1-Ww-S-removebg-preview.png"
+                    class="w-1/2  h-[400px]" />
+            </div>
+
+        </div>
+        <!-- banner end -->
+
+
         <!-- best seller -->
         <div class="bg-white p-5 w-full h-full container">
             <h2 class="text-xl font-bold text-center mb-3">Best hier for You</h2>
@@ -129,19 +150,6 @@
         </div>
         <!-- must have for every car end -->
 
-        <!-- banner -->
-        <div class=" p-5 w-full h-full container">
-            <div class="box p-3 bg-black h-[200] flex opacity-90 rounded-lg">
-                <h3 class="text-4xl font-bold text-white text-center mt-72 w-1/2">
-                    Get 20% off for your order
-                </h3>
-                <img src="https://i.ibb.co/Ks3VZYX/vector-car-png-favpng-gpin-VUFdw-Jp91d2ih-TCQu1-Ww-S-removebg-preview.png"
-                    class="w-1/2  h-full" />
-            </div>
-            
-        </div>
-
-        <!-- banner end -->
 
         <div class="bg-gray-200 p-5 w-full h-full container">
             <h2 class="text-xl font-bold text-center mb-3">Must have for every car</h2>
@@ -149,6 +157,32 @@
                 <Carousel />
             </div>
         </div>
+
+        <div class="bg-gray-200 p-5 w-full h-full ">
+            <div class="email">
+                <div class="w-1/2 pa-2 flex space-x-2 my-auto">
+                <div class="border-4 rounded-full flex justify-center items-center border-white pa-2 w-32 h-32">
+                    <i class="bi bi-envelope-paper text-5xl font-bold text-white hover:scale-150  transition-all"></i>
+                </div>
+                    <div class="block my-auto">
+                        <h2 class="uppercase text-3xl font-semibold text-white ">
+                            Signup and save !
+                        </h2>
+                        <p class="text-sm font-thin text-white">Exclusive email offers & Limited time discount specials</p>
+                    </div>
+                </div>
+                <div class="w-1/2 pa-2 flex justify-center h-full">
+                    <form class="flex my-auto w-full border-2 border-violet-700" >
+                        <input class="form-control w-3/4 rounded-none h-12" placeholder="Enter your email"/>
+                        <button class="w-1/4 bg-violet-700 text-xl font-bold text-white">
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
 
     </div>
 </template>
@@ -161,6 +195,8 @@ import Carousel from '../components/carousel/Carousel.vue';
 export default {
     data() {
         return {
+            email: '',
+            inputColor: false,
             categorys: [{
                 id: 1,
                 name: 'Inter Dhaka',
@@ -298,6 +334,18 @@ export default {
         }
     },
 
+    computed: {
+        emailT() {
+            let emails = this.email.length;
+            if (emails.includes('@')) {
+                return {
+                    // inputColor = true;
+                    // text-color = true;
+                }
+            }
+        }
+    },
+
     components: {
         Category,
         TopSeller,
@@ -307,8 +355,68 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 .home1 {
     background-image: url('@/assets/car2.jpg');
+}
+
+input:focus {
+    outline: none;
+}
+
+.emailT {
+    border: 1px solid black;
+}
+
+input[id="cb1"]+label {
+    width: 14px;
+    height: 14px;
+    border: 1px solid green;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+input[id="cb1"]:checked+label:after {
+    position: relative;
+    top: -10px;
+    left: -5px;
+    content: '\2714';
+    font-size: 6px;
+}
+
+input[id="cb1"] {
+    display: none;
+}
+
+/* input[id="cb1"]:checked::before{
+    background-color:green;
+} */
+input[type="checkbox"]:checked+label {
+    color: blue;
+}
+
+.t:after {
+    content: "\2714";
+    font-size: 10px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #49a6db !important;
+}
+
+.email {
+    background-image: url('@/assets/bottom_car.jpg');
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(60%);
+    display:flex;
+    padding:10px;
+}
+::placeholder{
+    font-size:16px;
+    font-weight: 400;
+    font-style: italic;
 }
 </style>
