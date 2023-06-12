@@ -158,6 +158,7 @@
             </div>
         </div>
 
+<!-- contact us -->
         <div class="bg-gray-200 p-5 w-full h-full ">
             <div class="email">
                 <div class="w-1/2 pa-2 flex space-x-2 my-auto">
@@ -172,18 +173,16 @@
                     </div>
                 </div>
                 <div class="w-1/2 pa-2 flex justify-center h-full">
-                    <form class="flex my-auto w-full border-2 border-violet-700" >
+                    <form class="flex my-auto w-full border-2 border-red-500" >
                         <input class="form-control w-3/4 rounded-none h-12" placeholder="Enter your email"/>
-                        <button class="w-1/4 bg-violet-700 text-xl font-bold text-white">
+                        <button class="w-1/4 bg-red-500 text-xl font-bold text-white">
                             Send
                         </button>
                     </form>
                 </div>
             </div>
         </div>
-        
-
-
+        <!-- contact us end-->
     </div>
 </template>
 
