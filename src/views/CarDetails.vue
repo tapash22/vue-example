@@ -1,6 +1,6 @@
 <template>
   <div class="cardetails">
-    <div class="container mx-auto flex gap-2 p-4 py-5">
+    <div class="container mx-auto gap-2 p-4 py-5">
       <div class="image w-2/4 h-[100vh] p-2 border-2 shadow-lg">
         <!-- <img src="@/assets/car.jpg" class="p-2" /> -->
         <CarImage />
@@ -55,13 +55,13 @@
         <div class="mb-4">
           <ul>
             <li class="text-yellow-400 text-lg font-normal ">
-              <i class="bi bi-check text-yellow-400 text-3xl font-semibold" ></i> In Stock
+              <i class="bi bi-check text-yellow-400 text-3xl font-semibold"></i> In Stock
             </li>
             <li class="text-yellow-400 text-lg font-normal ">
-              <i class="bi bi-check text-yellow-400 text-3xl font-semibold" ></i> Free delivery available
+              <i class="bi bi-check text-yellow-400 text-3xl font-semibold"></i> Free delivery available
             </li>
             <li class="text-yellow-400 text-lg font-normal ">
-              <i class="bi bi-check text-yellow-400 text-3xl font-semibold" ></i> Sale on 30% off
+              <i class="bi bi-check text-yellow-400 text-3xl font-semibold"></i> Sale on 30% off
             </li>
           </ul>
         </div>
@@ -71,16 +71,43 @@
           <button class="bg-yellow-400 text-white text-lg uppercase w-full h-10 ">Buy IT NOW</button>
         </div>
       </div>
-    <div class="color h-[100vh]  w-1/4 flex justify-center items-center">
-      <div class="bg-gray-200 p-3">
+      <div class="color h-[100vh]  w-1/4 flex justify-center items-center">
+        <div class="bg-gray-200 p-3">
 
+        </div>
+        <h4 class="flex  ">color:<input type="checkbox" class="w-[30px] h-[20px] " v-model="value" />red <br />
+          <input type="checkbox" class="w-[30px] h-[20px] " v-model="value" />green
+        </h4>
       </div>
-      <h4 class="flex  ">color:<input type="checkbox" class="w-[30px] h-[20px] " v-model="value" />red <br />
-        <input type="checkbox" class="w-[30px] h-[20px] " v-model="value" />green
-      </h4>
+
+      <div class="w-full flex justify-center py-5 bg-red-400">
+        <form @submit="submit">
+          <div class="my-1 block">
+            <label class="text-lg font-medium text-white px-2 w-full">Email/Phone</label>
+            <input type="text" v-model="form.email" @blur="isValidmail"
+            :class="{ valid: isValidMobileNumber, invalid: !isValidMobileNumber }"
+              class="w-[200px] h-[40px] border-2 border-violet-400 text-sm font-mono rounded-full" />
+            <div class="font-bold text-xs text-blue-500" v-if="!validMail">
+              Invalid email
+            </div>
+          </div>
+          <div class="my-1 block">
+            <label class="text-lg font-medium text-white px-2 w-full">Password</label>
+            <input type="password" v-model="form.password"
+              class="w-[200px] h-[40px] border-2 border-violet-400 text-sm font-mono rounded-full" />
+          </div>
+          <div>
+            <button type="submit" class="w-20 h-10 rounded-full bg-violet-500 text-lg font-medium">
+              submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
+
+
   </div>
-</div></template>
+</template>
 
 <script>
 
@@ -90,13 +117,39 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
+      form: {
+        email: '',
+        password: ''
+      },
+      validMail: true,
     }
   },
 
   components: {
     CarImage,
+  },
+
+  methods: {
+    submit(e) {
+      e.preventDefault();
+      let data = this.form.email;
+      let data1 = this.form.password;
+      alert(data + " click me " + data1);
+    },
+    isValidmail() {
+      const validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (this.form.email.match(validRegex)) {
+        this.validMail = true;
+      } else {
+        this.validMail = false;
+      }
+    }
   }
 }
 </script>
 
-<style></style>
+<style scoped>
+input[type="text"],
+input[type="password"] {
+  padding-left: 20px;
+}</style>
