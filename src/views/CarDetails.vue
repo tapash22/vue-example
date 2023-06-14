@@ -84,18 +84,21 @@
         <form @submit="submit">
           <div class="my-1 block">
             <label class="text-lg font-medium text-white px-2 w-full">Email/Phone</label>
-            <input type="text" v-model="form.email" @blur="isValidmail"
-            :class="{ valid: isValidMobileNumber, invalid: !isValidMobileNumber }"
+            <input type="text" v-model="form.email" @blur="isValidmail" @click="isCheckMail"
               class="w-[200px] h-[40px] border-2 border-violet-400 text-sm font-mono rounded-full" />
-            <div class="font-bold text-xs text-blue-500" v-if="!validMail">
-              Invalid email
-            </div>
+            <p class="font-bold text-xs text-blue-500">
+              {{ validMail }}
+            </p>
           </div>
           <div class="my-1 block">
             <label class="text-lg font-medium text-white px-2 w-full">Password</label>
-            <input type="password" v-model="form.password"
+            <input type="password" v-model="form.password" @blur="isValidPass" @click="isCheckPass"
               class="w-[200px] h-[40px] border-2 border-violet-400 text-sm font-mono rounded-full" />
+            <p class="font-bold text-xs text-blue-500">
+              {{ validPassword }}
+            </p>
           </div>
+
           <div>
             <button type="submit" class="w-20 h-10 rounded-full bg-violet-500 text-lg font-medium">
               submit
@@ -121,7 +124,8 @@ export default {
         email: '',
         password: ''
       },
-      validMail: true,
+      validMail: '',
+      validPassword: ''
     }
   },
 
@@ -130,6 +134,7 @@ export default {
   },
 
   methods: {
+
     submit(e) {
       e.preventDefault();
       let data = this.form.email;
@@ -137,12 +142,61 @@ export default {
       alert(data + " click me " + data1);
     },
     isValidmail() {
-      const validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if (this.form.email.match(validRegex)) {
-        this.validMail = true;
+      const numberRegex = /^\d+$/;
+      let email = this.form.email;
+
+      if (numberRegex.test(email)) {
+        const phoneNumberRegex = /^(\+?880|0)1[13456789]\d{8}$/;
+        if (phoneNumberRegex.test(email)) {
+          this.validMail = " "
+        } else {
+          this.validMail = "phone number is not valid"
+        }
       } else {
-        this.validMail = false;
+        const validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (validRegex.test(email)) {
+          this.validMail = " ";
+        } else {
+          this.validMail = "this is not valid email"
+        }
       }
+    },
+
+    isValidPass() {
+      let pass = this.form.password;
+
+      if (pass) {
+        const hasLowerCase = /[a-z]/.test(pass);
+        const hasUpperCase = /[A-Z]/.test(pass);
+        const hasNumber = /\d/.test(pass);
+        const hasSpecialChar = /[!@#$%^&*()\-_=+{};:,<.>]/.test(pass);
+        const passwordRegex = /^.{8,}$/.test(pass);
+
+        if (!hasLowerCase) {
+          this.validPassword = 'need lowercase'
+        } else if (!hasUpperCase) {
+          this.validPassword = "need uppercase"
+        } else if (!hasNumber) {
+          this.validPassword = "need number"
+        } else if (!hasSpecialChar) {
+          this.validPassword = "need char"
+        }else if (!passwordRegex) {
+          this.validPassword = "must be 8 char"
+        }  else {
+          this.validPassword = ""
+        }
+      }
+    },
+
+    isCheckMail() {
+      if (this.form.email) {
+        this.validMail = "";
+      } 
+    },
+    isCheckPass() {
+      if (this.form.password) {
+        this.validPassword = "";
+      } 
     }
   }
 }
@@ -152,4 +206,5 @@ export default {
 input[type="text"],
 input[type="password"] {
   padding-left: 20px;
-}</style>
+}
+</style>
