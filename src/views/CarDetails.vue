@@ -106,8 +106,29 @@
           </div>
         </form>
       </div>
-    </div>
 
+<div class="container">
+      <div class=" w-full h-auto p-3 flex">
+        <transition class="fade">
+          <div v-if="viewList" class="row">
+        <div class="w-1/4 p-2 " v-for="(viewl,i) in viewList" :key="i">
+          <div class="w-full h-[100px] bg-red-400 flex justify-center items-center">
+            <p class="text-lg font-bold text-blue-500">
+              {{ viewl.name }}
+            </p>
+          </div>
+        </div>
+      </div>
+      </transition>
+        
+</div>
+<div class="my-2">
+          <button class="w-[100px] h-[40px] rounded-full bg-red-500 text-xl font-bold " @click="showList =! showList" >
+            {{ showList ? 'hide' : 'show' }}
+          </button>
+        </div>
+</div>
+    </div>
 
   </div>
 </template>
@@ -125,9 +146,56 @@ export default {
         password: ''
       },
       validMail: '',
-      validPassword: ''
+      validPassword: '',
+
+      lists:[
+        {
+          id:1,
+          name:'tapash'
+        },
+        {
+          id:2,
+          name:'tapash2'
+        },
+        {
+          id:3,
+          name:'tapash3'
+        },
+        {
+          id:4,
+          name:'tapash4'
+        },
+        {
+          id:5,
+          name:'tapash5'
+        },
+        {
+          id:6,
+          name:'tapash6'
+        },
+        {
+          id:7,
+          name:'tapash7'
+        },
+        {
+          id:8,
+          name:'tapash8'
+        },
+      ],
+      showList:false
     }
   },
+
+computed:{
+  viewList(){
+    if(this.showList){
+      return this.lists;
+    }else{
+     return this.lists.slice(0,4);
+    }
+    
+  }
+},
 
   components: {
     CarImage,
@@ -207,4 +275,15 @@ input[type="text"],
 input[type="password"] {
   padding-left: 20px;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0.5s;
+}
+
 </style>
