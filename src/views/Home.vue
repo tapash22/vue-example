@@ -119,7 +119,7 @@
         <!-- best seller end -->
 
         <!-- must have for every car -->
-        <div class="bg-gray-200 p-5 w-full h-full container">
+        <div class="bg-white p-5 w-full h-full container">
             <h2 class="text-xl font-bold text-center mb-3">Must have for every car</h2>
             <div class="flex justify-center">
                 <p class="text-sm font-normal mb-3 text-center w-1/2">Enjoy an entirely new level of driving experience with
@@ -151,7 +151,7 @@
         <!-- must have for every car end -->
 
 
-        <div class="bg-gray-200 p-5 w-full h-full container">
+        <div class="bg-white p-5 w-full h-full container">
             <h2 class="text-xl font-bold text-center mb-3">Must have for every car</h2>
             <div class="flex justify-center">
                 <Carousel />
@@ -159,7 +159,7 @@
         </div>
 
 <!-- contact us -->
-        <div class="bg-gray-200 p-5 w-full h-full ">
+        <div class="bg-white p-5 w-full h-full ">
             <div class="email">
                 <div class="w-1/2 pa-2 flex space-x-2 my-auto">
                 <div class="border-4 rounded-full flex justify-center items-center border-white pa-2 w-32 h-32">

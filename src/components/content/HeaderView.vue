@@ -32,6 +32,7 @@
 export default {
   data(){
     return{
+      search:'',
       iconlist:[
         "bi bi-border-width",
         "bi bi-heart",

@@ -80,6 +80,10 @@
         </h4>
       </div>
 
+      <div>
+  <BarChart />
+</div>
+
       <div class="w-full flex justify-center py-5 bg-red-400">
         <form @submit="submit">
           <div class="my-1 block">
@@ -107,27 +111,33 @@
         </form>
       </div>
 
-<div class="container">
-      <div class=" w-full h-auto p-3 flex">
-        <transition class="fade">
-          <div v-if="viewList" class="row">
-        <div class="w-1/4 p-2 " v-for="(viewl,i) in viewList" :key="i">
-          <div class="w-full h-[100px] bg-red-400 flex justify-center items-center">
-            <p class="text-lg font-bold text-blue-500">
-              {{ viewl.name }}
-            </p>
-          </div>
+      <div class="container">
+        <div class=" w-full h-auto p-3 flex">
+          <transition class="fade">
+            <div v-if="viewList" class="row">
+              <div class="w-1/4 p-2 " v-for="(viewl, i) in viewList" :key="i">
+                <div class="w-full h-[100px] bg-red-400 flex justify-center items-center">
+                  <p class="text-lg font-bold text-blue-500">
+                    {{ viewl.name }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </transition>
+
         </div>
-      </div>
-      </transition>
-        
-</div>
-<div class="my-2">
-          <button class="w-[100px] h-[40px] rounded-full bg-red-500 text-xl font-bold " @click="showList =! showList" >
+        <div class="my-2">
+          <button class="w-[100px] h-[40px] rounded-full bg-red-500 text-xl font-bold " @click="showList = !showList">
             {{ showList ? 'hide' : 'show' }}
           </button>
         </div>
-</div>
+
+      </div>
+
+      <!-- ckeditor -->
+
+
+      <!-- ckeditor end -->
     </div>
 
   </div>
@@ -136,10 +146,13 @@
 <script>
 
 import CarImage from '@/components/cars/CarImage.vue';
+import BarChart from '@/components/chart/BarChart.vue';
 
 export default {
   data() {
     return {
+      value:true,
+      dataToSave: "",
       id: this.$route.params.id,
       form: {
         email: '',
@@ -148,57 +161,58 @@ export default {
       validMail: '',
       validPassword: '',
 
-      lists:[
+      lists: [
         {
-          id:1,
-          name:'tapash'
+          id: 1,
+          name: 'tapash'
         },
         {
-          id:2,
-          name:'tapash2'
+          id: 2,
+          name: 'tapash2'
         },
         {
-          id:3,
-          name:'tapash3'
+          id: 3,
+          name: 'tapash3'
         },
         {
-          id:4,
-          name:'tapash4'
+          id: 4,
+          name: 'tapash4'
         },
         {
-          id:5,
-          name:'tapash5'
+          id: 5,
+          name: 'tapash5'
         },
         {
-          id:6,
-          name:'tapash6'
+          id: 6,
+          name: 'tapash6'
         },
         {
-          id:7,
-          name:'tapash7'
+          id: 7,
+          name: 'tapash7'
         },
         {
-          id:8,
-          name:'tapash8'
+          id: 8,
+          name: 'tapash8'
         },
       ],
-      showList:false
+      showList: false
     }
   },
 
-computed:{
-  viewList(){
-    if(this.showList){
-      return this.lists;
-    }else{
-     return this.lists.slice(0,4);
+  computed: {
+    viewList() {
+      if (this.showList) {
+        return this.lists;
+      } else {
+        return this.lists.slice(0, 4);
+      }
+
     }
-    
-  }
-},
+  },
 
   components: {
     CarImage,
+    BarChart,
   },
 
   methods: {
@@ -248,9 +262,9 @@ computed:{
           this.validPassword = "need number"
         } else if (!hasSpecialChar) {
           this.validPassword = "need char"
-        }else if (!passwordRegex) {
+        } else if (!passwordRegex) {
           this.validPassword = "must be 8 char"
-        }  else {
+        } else {
           this.validPassword = ""
         }
       }
@@ -259,12 +273,12 @@ computed:{
     isCheckMail() {
       if (this.form.email) {
         this.validMail = "";
-      } 
+      }
     },
     isCheckPass() {
       if (this.form.password) {
         this.validPassword = "";
-      } 
+      }
     }
   }
 }
@@ -285,5 +299,4 @@ input[type="password"] {
 .fade-leave-to {
   opacity: 0.5s;
 }
-
 </style>

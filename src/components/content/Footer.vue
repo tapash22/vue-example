@@ -1,9 +1,11 @@
 <template>
-    <div class="w-full h-[400px] bg-gray-300 flex">
+
+    <div class="block">
+    <div class="w-full h-[330px] bg-gray-300 flex">
         <!-- left -->
         <div class="w-1/3 h-full block">
             <img src="https://static.vecteezy.com/system/resources/previews/013/923/539/original/car-logo-vehicle-sports-png.png"
-                class="w-36 h-36 ml-5 " alt="logo" />
+                class="w-32 h-32 ml-10 " alt="logo" />
             <p class="text-sm font-medium text-black mx-4">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aspernatur inventore necessitatibus alias
                 illo quisquam fugit magnam doloremque facere ea?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aspernatur inventore necessitatibus alias
@@ -52,9 +54,9 @@
         <div class="w-1/3 h-full block ">
             <div class="bg-red-500">
 
-                <div class="pa-2 flex justify-start py-2 px-4">
-                    <div class="p-2 mt-3 w-24 h-24 rounded-full border-2 border-white flex justify-center items-center">
-                        <i class="bi bi-telephone-forward text-5xl text-white"></i>
+                <div class="pa-2 flex justify-start py-1 px-4">
+                    <div class="p-2 mt-2 w-20 h-20 rounded-full border-2 border-white flex justify-center items-center">
+                        <i class="bi bi-telephone-forward text-3xl text-white"></i>
                     </div>
                     <div class="my-auto mx-3">
                         <p class="text-lg font-normal text-white ">
@@ -109,6 +111,12 @@
         </div>
         <!-- right end -->
     </div>
+    <div class="flex justify-center py-1">
+        <p class="text-sm font-light text-black ">
+            &copy; All Right reserved.
+        </p>
+    </div>
+</div>
 </template>
 <script>
 export default {
