@@ -1,47 +1,18 @@
 <template>
-    <carousel :per-page="3" :navigate-to="someLocalProperty" :mouse-drag="false" paginationActiveColor="red" paginationSize="10" paginationPadding="2" paginationColor="blue">
-        <slide style="padding:10px;" >
+    <carousel :perPageCustom="[
+        [480, 1],
+        [768,2],
+        [992,3],
+        [1200,3]
+    ]" :navigate-to="someLocalProperty" :mouse-drag="false" paginationActiveColor="red" paginationSize="10" paginationPadding="2" paginationColor="blue">
+        <slide style="padding:10px;" v-for="i in 6" :key="i" >
             <div class="card w-full h-[300px] bg-red-500 p-2 flex justify-center items-center" >
                 <h2 class="text-4xl font-extrabold text-center text-white">
                     Do you know
                 </h2>
             </div>
         </slide>
-        <slide style="padding:10px;">
-            <div class="card w-full  h-[300px] bg-violet-500 p-2 flex justify-center items-center " >
-                <h2 class="text-4xl font-extrabold  text-yellow-800 ">
-                    who i am
-                </h2>
-            </div>
-        </slide>
-        <slide style="padding:10px;">
-            <div class="card w-full h-[300px] bg-red-500 p-2 flex justify-center items-center" >
-                <h2 class="text-4xl font-extrabold text-center text-white">
-                    Do you know
-                </h2>
-            </div>
-        </slide>
-        <slide style="padding:10px;">
-            <div class="card w-full  h-[300px] bg-violet-500 p-2 flex justify-center items-center " >
-                <h2 class="text-4xl font-extrabold  text-yellow-800 ">
-                    who i am
-                </h2>
-            </div>
-        </slide>
-        <slide style="padding:10px;">
-            <div class="card w-full h-[300px] bg-red-500 p-2 flex justify-center items-center" >
-                <h2 class="text-4xl font-extrabold text-center text-white">
-                    Do you know
-                </h2>
-            </div>
-        </slide>
-        <slide style="padding:10px;">
-            <div class="card w-full  h-[300px] bg-violet-500 p-2 flex justify-center items-center " >
-                <h2 class="text-4xl font-extrabold  text-yellow-800 ">
-                    who i am
-                </h2>
-            </div>
-        </slide>
+
     </carousel>
 </template>
 

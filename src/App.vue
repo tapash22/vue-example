@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Navigation />
-    <HeaderView />
-    <SubNavigation />
+    <!-- <HeaderView />
+    <SubNavigation /> -->
 
     <div class="main">
       <router-view/>

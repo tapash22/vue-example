@@ -1,18 +1,18 @@
 <template>
 
     <div class="block">
-    <div class="w-full h-[330px] bg-gray-300 flex">
+    <div class="w-full h-full sm:h-full md:h-[330px] lg:h-[330px] xl:h-[330px] bg-gray-300 block sm:block md:flex lg:flex xl:flex">
         <!-- left -->
-        <div class="w-1/3 h-full block">
+        <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 h-full block py-2 sm:py-2 md:py-0 lg:py-0 xl:py-0">
             <img src="https://static.vecteezy.com/system/resources/previews/013/923/539/original/car-logo-vehicle-sports-png.png"
-                class="w-32 h-32 ml-10 " alt="logo" />
-            <p class="text-sm font-medium text-black mx-4">
+                class="w-32 h-32 ml-20 sm:ml-20 md:ml-10 lg:ml-10 xl:ml-10 " alt="logo" />
+            <p class="text-sm sm:text-center md:text-center lg:text-start xl:text-start font-medium text-black mx-4">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aspernatur inventore necessitatibus alias
                 illo quisquam fugit magnam doloremque facere ea?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aspernatur inventore necessitatibus alias
                 illo quisquam fugit magnam doloremque facere ea?
             </p>
             <div>
-                <ul class="flex gap-4 my-3 mx-4">
+                <ul class="flex justify-center  sm:justify-center md:justify-center lg:justify-start xl:justify-start gap-4 my-3 ml-0 sm:ml-0 md:ml-3 lg:ml-5 xl:ml-5 ">
                     <li v-for="socialm in socialmedias" :key="socialm.id">
                         <i class="text-xl text-red-400" :class="socialm.icon"></i>
                     </li>
@@ -24,7 +24,7 @@
 
         <!-- middle -->
 
-        <div class="w-1/3 h-full flex justify-center gap-5">
+        <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 h-full flex justify-center gap-5 py-2 sm:py-2 md:py-0 lg:py-0 xl:py-0">
             <div class="mt-5">
                 <h3 class="text-black text-2xl font-semibold border-b-2 border-red-500 mb-2">
                     Customer Service
@@ -51,7 +51,7 @@
         <!-- middle end -->
 
         <!-- right -->
-        <div class="w-1/3 h-full block ">
+        <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 h-full block py-2 sm:py-2 md:py-0 lg:py-0 xl:py-0 ">
             <div class="bg-red-500">
 
                 <div class="pa-2 flex justify-start py-1 px-4">

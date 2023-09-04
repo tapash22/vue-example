@@ -2,18 +2,18 @@
     <div class="home relative">
         <div class="home1 bg-fixed flex justify-center items-center h-[450px] opacity-90 bg-center ">
             <div class="w-full">
-                <h2 class="text-4xl font-semibold tracking-widest py-4 uppercase text-center text-red-400">Select your
+                <h2 class="text-xl sm:text-xl md:text-2xl lg:text-4xl xl:text-4xl font-semibold tracking-widest py-4 uppercase text-center text-red-400">Select your
                     vehicle</h2>
-                <div class="search flex gap-2 justify-center w-full mb-10">
-                    <div class="h-14 px-2 bg-white items-center w-3/12">
-                        <select class="h-full w-full bg-white text-lg font-medium tracking-wider text-center">
+                <div class="search block sm:block md:flex lg:flex xl:flex gap-2 justify-center w-full mb-10">
+                    <div class="h-14 px-2 bg-white items-center w-full sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12 overflow-hidden">
+                        <select class="h-full w-full bg-white text-lg font-medium tracking-wider text-center overflow-hidden">
                             <option selected class="border-b-2 border-gray-400"> Select year</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
                     </div>
-                    <div class="h-14 px-2 bg-white items-center w-3/12">
+                    <div class="h-14 px-2 bg-white items-center sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12">
                         <select class="h-full w-full bg-white text-lg font-medium tracking-wider text-center ">
                             <option selected>Select Brand</option>
                             <option value="1">One</option>
@@ -21,7 +21,7 @@
                             <option value="3">Three</option>
                         </select>
                     </div>
-                    <div class="h-14 px-2 bg-white items-center w-3/12">
+                    <div class="h-14 px-2 bg-white items-center sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12">
                         <select class="h-full w-full bg-white text-lg font-medium tracking-wider text-center ">
                             <option selected> Select Model</option>
                             <option value="1">One</option>
@@ -29,12 +29,12 @@
                             <option value="3">Three</option>
                         </select>
                     </div>
-                    <div class="h-14 flex justify-center  bg-red-900 w-1/12">
+                    <div class="h-14 flex justify-center  bg-red-900 sm:w-full md:w-1/12 lg:w-1/12 xl:w-1/12">
                         <button
                             class="bg-transparent h-full text-xl font-medium tracking-wider text-center text-red-100 uppercase">GO</button>
                     </div>
                 </div>
-                <div class="tag flex justify-center mt-5">
+                <div class="tag hidden sm:hidden md:flex lg:flex xl:flex  justify-center mt-5">
                     <div class="w-2/3 flex justify-evenly">
                         <a href="#" class="text-xl text-red-400 font-medium tracking-wide">Shop By Product</a>
                         <span class="font-semibold text-xl text-red-400">|</span>
@@ -45,31 +45,46 @@
             </div>
         </div>
         <!-- first part of header -->
-        <div class="bg-white p-5 w-full h-full flex">
-            <div class="w-1/4 p-2">
-                <div class="w-full my-1 border-4 bg-cover overflow-hidden">
+        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full sm:block lg:flex md:flex xl:flex">
+            <div class="sm:w-full md:w-1/4 lg:w-1/4 xl:w-1/4 p-2">
+                <div class="w-full my-1 border-4 bg-cover overflow-hidden relative">
                     <img src="@/assets/car.jpg"
                         class="scale-100 hover:scale-125 transition duration-300 hover:duration-700 rotate-0 hover:rotate-2" />
+                        <h2 class="text-2xl text-red-800 font-bold w-full absolute top-1/2 left-10">
+                        This is new car
+                    </h2>
                 </div>
-                <div class="w-full my-1 border-4 bg-cover overflow-hidden">
+                <div class="w-full my-1 border-4 bg-cover overflow-hidden relative">
                     <img src="@/assets/car.jpg"
                         class="scale-100 hover:scale-125 transition duration-300 hover:duration-700 rotate-0 hover:rotate-2" />
+                        <h2 class="text-2xl text-red-800 font-bold w-full absolute top-1/2 left-10">
+                        This is new car
+                    </h2>
                 </div>
             </div>
-            <div class="w-2/4 overflow-hidden shadow-2xl rounded-lg relative">
+            <div class=" sm:w-full md:w-2/4 lg:w-2/4 xl:w-2/4 overflow-hidden ring-8 ring-blue-950 rounded-lg relative">
                 <img src="@/assets/car.jpg"
-                    class=" relative scale-100 hover:scale-110 transition duration-300 hover:duration-700 rounded-lg rotate-0 hover:rotate-2" />
+                    class=" relative scale-100 hover:scale-110 transition duration-300 hover:duration-700 rounded-lg rotate-0 hover:rotate-2 h-full" />
 
+                    <h2 class="text-2xl text-red-800 font-bold w-full absolute top-1/2 left-1/3">
+                        This is new car
+                    </h2>
             </div>
 
-            <div class="w-1/4 p-2 ">
-                <div class="w-full my-1 border-4 bg-cover overflow-hidden">
+            <div class="sm:w-full md:w-1/4 lg:w-1/4 xl:w-1/4 p-2 ">
+                <div class="w-full my-1 border-4 bg-cover overflow-hidden relative">
                     <img src="@/assets/car.jpg"
                         class="scale-100 hover:scale-125 transition duration-300 hover:duration-700 rotate-0 hover:rotate-2" />
+                        <h2 class="text-2xl text-red-800 font-bold w-full absolute top-1/2 left-10">
+                        This is new car
+                    </h2>
                 </div>
-                <div class="w-full my-1 border-4 bg-cover overflow-hidden">
+                <div class="w-full my-1 border-4 bg-cover overflow-hidden relative">
                     <img src="@/assets/car.jpg"
                         class="scale-100 hover:scale-125 transition duration-300 hover:duration-700 rotate-0 hover:rotate-2" />
+                        <h2 class="text-2xl text-white font-bold w-full absolute top-1/2 left-10">
+                        This is new car
+                    </h2>
                 </div>
             </div>
 
@@ -79,7 +94,7 @@
 
         <!-- category -->
 
-        <div class="bg-white p-5 w-full h-full">
+        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full">
             <h2 class="text-xl font-bold text-center mb-3">Find Your Destination !!</h2>
             <div class="">
                 <Category :categorys="categorys" />
@@ -91,8 +106,8 @@
 
         <!-- banner -->
 
-        <div class=" p-5 w-full h-full container">
-            <div class="box p-3 bg-black h-[200] flex opacity-90 rounded-lg">
+        <div class="w-full h-full container">
+            <div class="box p-3 bg-black h-[200] hidden sm:block md:flex lg:flex xl:flex opacity-90 rounded-lg">
                 <h3 class="text-4xl font-bold text-white text-center my-auto w-1/2">
                     Get 20% off for your order
                     <br />
@@ -110,7 +125,7 @@
 
 
         <!-- best seller -->
-        <div class="bg-white p-5 w-full h-full container">
+        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full container">
             <h2 class="text-xl font-bold text-center mb-3">Best hier for You</h2>
             <TopSeller :carLists="carLists" />
 
@@ -119,10 +134,10 @@
         <!-- best seller end -->
 
         <!-- must have for every car -->
-        <div class="bg-white p-5 w-full h-full container">
+        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full container">
             <h2 class="text-xl font-bold text-center mb-3">Must have for every car</h2>
             <div class="flex justify-center">
-                <p class="text-sm font-normal mb-3 text-center w-1/2">Enjoy an entirely new level of driving experience with
+                <p class="text-sm font-normal mb-3 text-center w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">Enjoy an entirely new level of driving experience with
                     our in-depth selection of superior car bulbs, brake
                     pads,
                     spark plugs, and other azirspares parts and accessories designed to
@@ -130,8 +145,8 @@
                 </p>
             </div>
 
-            <div class="flex justify-start gap-2">
-                <div class="card" v-for="part in parts" :key="part.id">
+            <div class="block sm:block md:flex lg:flex xl:flex justify-start gap-2">
+                <div class="card my-1" v-for="part in parts" :key="part.id">
                     <!-- <router-link :to="{ name: 'carDetails', params: { id: carList.id } }"> -->
                     <div class="card-body h-60 w-full p-0 overflow-hidden">
                         <img :src="part.image" class="h-full w-full" />
@@ -151,28 +166,28 @@
         <!-- must have for every car end -->
 
 
-        <div class="bg-white p-5 w-full h-full container">
+        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full container">
             <h2 class="text-xl font-bold text-center mb-3">Must have for every car</h2>
-            <div class="flex justify-center">
+            <div class="block sm:block md:flex lg:flex xl:flex justify-center">
                 <Carousel />
             </div>
         </div>
 
 <!-- contact us -->
-        <div class="bg-white p-5 w-full h-full ">
-            <div class="email">
-                <div class="w-1/2 pa-2 flex space-x-2 my-auto">
-                <div class="border-4 rounded-full flex justify-center items-center border-white pa-2 w-32 h-32">
+        <div class="bg-white p-2 sm:p-2 md:p-5 lg:p-5 xl:p-5 w-full h-full ">
+            <div class="email block sm:block md:flex lg:flex xl:flex">
+                <div class="w-full mt-5 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pa-2 bg-red-600 align-middle flex justify-center space-x-2 my-auto">
+                <div class="border-1 sm:border-2 md:border-3 lg:border-4 xl:border-4 rounded-full flex justify-center items-center border-white pa-2 w-10 sm:w-10 md:w-20 lg:w-32 xl:w-32 h-10 sm:h-10 md:h-20 lg:h-32 xl:h-32">
                     <i class="bi bi-envelope-paper text-5xl font-bold text-white hover:scale-150  transition-all"></i>
                 </div>
                     <div class="block my-auto">
-                        <h2 class="uppercase text-3xl font-semibold text-white ">
+                        <h2 class="uppercase text-xl sm:text-xl md:text-2xl ld:text-3xl xl:text-3xl font-semibold text-white ">
                             Signup and save !
                         </h2>
                         <p class="text-sm font-thin text-white">Exclusive email offers & Limited time discount specials</p>
                     </div>
                 </div>
-                <div class="w-1/2 pa-2 flex justify-center h-full">
+                <div class="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pa-2 flex justify-center h-full">
                     <form class="flex my-auto w-full border-2 border-red-500" >
                         <input class="form-control w-3/4 rounded-none h-12" placeholder="Enter your email"/>
                         <button class="w-1/4 bg-red-500 text-xl font-bold text-white">
@@ -410,7 +425,6 @@ input[type="checkbox"]:checked+label {
     background-size: cover;
     background-position: center;
     filter: brightness(60%);
-    display:flex;
     padding:10px;
 }
 ::placeholder{

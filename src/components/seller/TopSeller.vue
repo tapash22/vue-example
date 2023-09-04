@@ -1,6 +1,6 @@
 <template>
-    <div class="flex justify-start gap-2">
-        <div class="card" v-for="carList in carLists" :key="carList.id">
+    <div class="block sm:block md:flex lg:flex xl:flex justify-start gap-2">
+        <div class="card my-1" v-for="carList in carLists" :key="carList.id">
             <router-link :to="{name:'carDetails',params:{id:carList.id}}">
             <div class="card-body h-60 w-full p-0 overflow-hidden">
                 <img :src="carList.image" class="h-full w-full" />
