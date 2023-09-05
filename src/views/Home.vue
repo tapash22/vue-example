@@ -50,14 +50,14 @@
                 <div class="w-full my-1 border-4 bg-cover overflow-hidden relative">
                     <img src="@/assets/car.jpg"
                         class="scale-100 hover:scale-125 transition duration-300 hover:duration-700 rotate-0 hover:rotate-2" />
-                        <h2 class="text-2xl text-red-800 font-bold w-full absolute top-1/2 left-10">
+                        <h2 class="text-2xl text-red-800 font-bold w-full absolute bottom-2 left-10">
                         This is new car
                     </h2>
                 </div>
                 <div class="w-full my-1 border-4 bg-cover overflow-hidden relative">
                     <img src="@/assets/car.jpg"
                         class="scale-100 hover:scale-125 transition duration-300 hover:duration-700 rotate-0 hover:rotate-2" />
-                        <h2 class="text-2xl text-red-800 font-bold w-full absolute top-1/2 left-10">
+                        <h2 class="text-2xl text-red-800 font-bold w-full absolute bottom-2 left-10">
                         This is new car
                     </h2>
                 </div>
@@ -66,7 +66,7 @@
                 <img src="@/assets/car.jpg"
                     class=" relative scale-100 hover:scale-110 transition duration-300 hover:duration-700 rounded-lg rotate-0 hover:rotate-2 h-full" />
 
-                    <h2 class="text-2xl text-red-800 font-bold w-full absolute top-1/2 left-1/3">
+                    <h2 class="text-2xl text-red-800 font-bold w-full absolute bottom-2 left-1/3">
                         This is new car
                     </h2>
             </div>
@@ -75,14 +75,14 @@
                 <div class="w-full my-1 border-4 bg-cover overflow-hidden relative">
                     <img src="@/assets/car.jpg"
                         class="scale-100 hover:scale-125 transition duration-300 hover:duration-700 rotate-0 hover:rotate-2" />
-                        <h2 class="text-2xl text-red-800 font-bold w-full absolute top-1/2 left-10">
+                        <h2 class="text-2xl text-red-800 font-bold w-full absolute bottom-2 left-10">
                         This is new car
                     </h2>
                 </div>
                 <div class="w-full my-1 border-4 bg-cover overflow-hidden relative">
                     <img src="@/assets/car.jpg"
                         class="scale-100 hover:scale-125 transition duration-300 hover:duration-700 rotate-0 hover:rotate-2" />
-                        <h2 class="text-2xl text-white font-bold w-full absolute top-1/2 left-10">
+                        <h2 class="text-2xl text-red-800 font-bold w-full absolute bottom-2 left-10">
                         This is new car
                     </h2>
                 </div>
@@ -94,7 +94,7 @@
 
         <!-- category -->
 
-        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full">
+        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:pa-5 w-full h-full py-3">
             <h2 class="text-xl font-bold text-center mb-3">Find Your Destination !!</h2>
             <div class="">
                 <Category :categorys="categorys" />
@@ -106,15 +106,15 @@
 
         <!-- banner -->
 
-        <div class="w-full h-full container">
-            <div class="box p-3 bg-black h-[200] hidden sm:block md:flex lg:flex xl:flex opacity-90 rounded-lg">
-                <h3 class="text-4xl font-bold text-white text-center my-auto w-1/2">
+        <div class="w-full h-full container py-3">
+            <div class="box p-3 bg-black h-[200] hidden sm:block md:flex lg:flex xl:flex opacity-80 shadow-2xl shadow-gray-400">
+                <h3 class="text-4xl font-bold text-white text-center my-auto px-2 w-1/2">
                     Get 20% off for your order
                     <br />
-                    <small class="text-xs font-thin text-green-300 line-clamp-3 w-1/2 mt-3 text-center ml-32">
+                    <!-- <small class="text-xs font-thin text-white line-clamp-3 w-1/2 mt-3 text-center ml-32">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloremque, repudiandae quam quos
                         exercitationem
-                    </small>
+                    </small> -->
                 </h3>
                 <img src="https://i.ibb.co/Ks3VZYX/vector-car-png-favpng-gpin-VUFdw-Jp91d2ih-TCQu1-Ww-S-removebg-preview.png"
                     class="w-1/2  h-[400px]" />
@@ -125,7 +125,7 @@
 
 
         <!-- best seller -->
-        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full container">
+        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full container py-3">
             <h2 class="text-xl font-bold text-center mb-3">Best hier for You</h2>
             <TopSeller :carLists="carLists" />
 
@@ -134,7 +134,7 @@
         <!-- best seller end -->
 
         <!-- must have for every car -->
-        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full container">
+        <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full container py-3">
             <h2 class="text-xl font-bold text-center mb-3">Must have for every car</h2>
             <div class="flex justify-center">
                 <p class="text-sm font-normal mb-3 text-center w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">Enjoy an entirely new level of driving experience with
@@ -152,8 +152,8 @@
                         <img :src="part.image" class="h-full w-full" />
                     </div>
                     <!-- </router-link> -->
-                    <div class="card-text w-full h-auto p-2 py-2">
-                        <h3 class="uppercase text-sm font-bold my-1 ">{{ part.name }}</h3>
+                    <div class="card-text w-full h-auto">
+                        <h3 class="uppercase text-sm font-bold py-2 text-white text-center bg-gray-600 ">{{ part.name }}</h3>
                         <!-- <p class="text-sm font-light my-1 text-red-900">{{ carList.ownerName }} | {{ carList.phone }}</p>
                         <p class="text-sm font-light my-1">{{ carList.model }}</p>
                         <p class="text-lg font-semibold my-2">Tk. {{ carList.price }}/day</p> -->
@@ -174,13 +174,13 @@
         </div>
 
 <!-- contact us -->
-        <div class="bg-white p-2 sm:p-2 md:p-5 lg:p-5 xl:p-5 w-full h-full ">
-            <div class="email block sm:block md:flex lg:flex xl:flex">
-                <div class="w-full mt-5 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pa-2 bg-red-600 align-middle flex justify-center space-x-2 my-auto">
-                <div class="border-1 sm:border-2 md:border-3 lg:border-4 xl:border-4 rounded-full flex justify-center items-center border-white pa-2 w-10 sm:w-10 md:w-20 lg:w-32 xl:w-32 h-10 sm:h-10 md:h-20 lg:h-32 xl:h-32">
+        <div class="bg-white p-2 sm:p-2 md:p-5 lg:p-5 xl:p-5 w-full h-full  ">
+            <div class="email block sm:block md:flex lg:flex xl:flex ">
+                <div class="w-full mt-5 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pa-2 align-middle flex justify-center space-x-2 my-auto">
+                <div class="border-1 sm:border-2 md:border-3 lg:border-3 xl:border-3 rounded-full flex justify-center items-center border-white pa-2 w-10 sm:w-10 md:w-20 lg:w-24 xl:w-24 h-10 sm:h-10 md:h-20 lg:h-24 xl:h-24">
                     <i class="bi bi-envelope-paper text-5xl font-bold text-white hover:scale-150  transition-all"></i>
                 </div>
-                    <div class="block my-auto">
+                    <div class="block my-auto align-middle">
                         <h2 class="uppercase text-xl sm:text-xl md:text-2xl ld:text-3xl xl:text-3xl font-semibold text-white ">
                             Signup and save !
                         </h2>
@@ -214,22 +214,22 @@ export default {
             categorys: [{
                 id: 1,
                 name: 'Inter Dhaka',
-                image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                image: require('@/assets/car_view.jpg'),
             },
             {
                 id: 2,
                 name: 'Outside Dhaka',
-                image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                image: require('@/assets/car_view.jpg'),
             },
             {
                 id: 3,
                 name: 'Travel',
-                image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                image: require('@/assets/car_view.jpg'),
             },
             {
                 id: 4,
-                name: 'hourly',
-                image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                name: 'Hourly',
+                image: require('@/assets/car_view.jpg'),
             },
             ],
 
@@ -245,7 +245,7 @@ export default {
                         "Air freshner",
                     ],
                     model: 2016,
-                    image: require('@/assets/car2.jpg'),
+                    image: require('@/assets/rent_car.jpg'),
                     color: 'red',
                     ownerName: 'name of owner',
                     phone: '01674345763',
@@ -264,7 +264,7 @@ export default {
                         "Air freshner",
                     ],
                     model: 2017,
-                    image: require('@/assets/car2.jpg'),
+                    image: require('@/assets/rent_car.jpg'),
                     color: 'red',
                     ownerName: 'name of owner',
                     phone: '01674345763',
@@ -283,7 +283,7 @@ export default {
                         "Air freshner",
                     ],
                     model: 2015,
-                    image: require('@/assets/car2.jpg'),
+                    image: require('@/assets/rent_car.jpg'),
                     color: 'red',
                     ownerName: 'name of owner',
                     phone: '01674345763',
@@ -302,7 +302,7 @@ export default {
                         "Air freshner",
                     ],
                     model: 2014,
-                    image: require('@/assets/car2.jpg'),
+                    image: require('@/assets/rent_car.jpg'),
                     color: 'red',
                     ownerName: 'name of owner',
                     phone: '01674345763',
@@ -317,23 +317,23 @@ export default {
                 {
                     id: 1,
                     name: 'Brake Pads',
-                    image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                    image: require('@/assets/1.jpg')
                 },
                 {
                     id: 2,
                     name: 'Air Filter',
-                    image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                    image: require('@/assets/3.jpg')
                 },
                 {
                     id: 3,
                     name: 'Moto Oils',
-                    image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
+                    image: require('@/assets/4.jpg')
                 },
                 {
                     id: 4,
                     name: 'Custom Wheel',
-                    image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
-                },
+                    image: require('@/assets/2.jpg')
+                }
                 // {
                 //     id: 5,
                 //     name: 'Exhaust System',
