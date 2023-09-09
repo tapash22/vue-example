@@ -48,11 +48,13 @@
         <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full sm:block lg:flex md:flex xl:flex">
             <div class="sm:w-full md:w-1/4 lg:w-1/4 xl:w-1/4 p-2">
                 <div class="w-full my-1 border-4 bg-cover overflow-hidden relative">
+                    <router-link to="/">
                     <img src="@/assets/car.jpg"
                         class="scale-100 hover:scale-125 transition duration-300 hover:duration-700 rotate-0 hover:rotate-2" />
                         <h2 class="text-2xl text-red-800 font-bold w-full absolute bottom-2 left-10">
                         This is new car
                     </h2>
+                </router-link>
                 </div>
                 <div class="w-full my-1 border-4 bg-cover overflow-hidden relative">
                     <img src="@/assets/car.jpg"
@@ -167,7 +169,7 @@
 
 
         <div class="bg-white p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full container">
-            <h2 class="text-xl font-bold text-center mb-3">Must have for every car</h2>
+            <h2 class="text-xl font-bold text-center mb-3">Must have you know</h2>
             <div class="block sm:block md:flex lg:flex xl:flex justify-center">
                 <Carousel />
             </div>
