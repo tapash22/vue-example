@@ -117,9 +117,9 @@ Check Offers
                   Honda Elevate price for the base model starts at Rs. 13.13 Lakh and the top model price goes upto Rs. 19.19 Lakh (on-road Mumbai). Elevate price for 8 variants is listed below.
                 </p>
 
-                <div class="p-2 bg-gray-400 w-full ring-1 ring-gray-500">
-                  <ul class="block">
-                    <li class="flex justify-around border-b-2 border-white py-2">
+                <div class="my-4 w-full ring-1 ring-gray-300">
+                  <ul class="block" v-if="carListView">
+                    <li class="flex justify-around border-b-2 border-gray-400 py-2">
                       <p class="text-sm font-bold text-gray-800 flex justify-center">
                         Version
                       </p>
@@ -127,7 +127,7 @@ Check Offers
                         On Road Price
                       </p>
                     </li>
-                    <li class="flex justify-around border-b-2 border-white py-2" v-for="cars in cardetails" :key="cars.id">
+                    <li class="flex justify-around border-b-2 border-gray-400 py-2" v-for="cars in carListView" :key="cars.id">
                       <p class="text-sm font-normal text-gray-800 flex justify-center">
                         {{cars.name}}
                         <br/>
@@ -138,6 +138,9 @@ Check Offers
                       </p>
                     </li>
                   </ul>
+                  <p class="text-lg font-medium text-gray-400 w-full flex justify-center py-2 cursor-pointer" @click="show = !show">
+                    {{ show ? 'hide': 'show' }}
+                  </p>
                 </div>
               </div>
               <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
@@ -147,8 +150,46 @@ Check Offers
           <!-- Section 2 content -->
         </section>
         <section id="section3" v-scrollspy-target>
-          <div class="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 h-auto p-5  flex justify-center align-middle bg-white">
-              <img src="@/assets/car.jpg" class="w-[600px] h-[350px] ring-1 ring-gray-500" />
+          <div class="w-full sm:w-full md:w-full lg:w-full xl:w-full h-auto p-5  flex justify-center align-middle bg-white">
+
+              <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 block">
+                <h3 class="text-xl font-medium text-gray-600 py-2 ">
+                  Honda Elevate Car Specifications
+                </h3>
+                <div class="grid grid-cols-3">
+                  <div class="block ring-1 ring-gray-400 p-2" v-for="cari in carInfo" :key="cari.id">
+                    <div class="flex">
+                      <i :class="cari.icon" class="text-lg text-red-600 "></i>
+                      <span class="text-sm font-light text-gray-400 ml-2">
+                        {{cari.name}}
+                      </span>
+                    </div>
+                    <p class="text-sm font-medium text-gray-500">
+                      {{cari.amount}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 block px-5">
+                <h3 class="text-xl font-medium text-gray-600 py-2 ">
+                  Car Buyer's Tools
+                </h3>
+                <div class="grid grid-cols-1 w-2/3">
+                  <div class="ring-1 ring-gray-500 p-2 w-full flex px-3" v-for="cart in carTools" :key="cart">
+                    <div class="w-1/4 h-auto flex justify-center py-1 ">
+                      <i :class="cart.icon" class="text-3xl text-gray-600 "></i>
+                    </div>
+                    <div class="w-3/4 h-auto block">
+                      <p class="text-lg font-medium text-black w-full">
+{{ cart.title }}
+                      </p>
+                      <p class="text-sm font-normal text-gray-400 leading-tight" >
+{{ cart.message }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           <!-- Section 3 content -->
         </section>
@@ -207,7 +248,7 @@ export default {
         // Add more tabs as needed
       ],
       activeTab: "profile",
-
+      show:false,
       cardetails:[
         {
           id:1,
@@ -245,6 +286,67 @@ export default {
           address:'Nikunjo-2, Khilkhat',
           price:"12Lak"
         },
+      ],
+
+      carInfo:[
+        {
+          id:1,
+          name:'price',
+          icon:'bi bi-clock',
+          amount:'Rs. 13.13 Lakh onwards'
+        },
+        {
+          id:2,
+          name:'price',
+          icon:'bi bi-clock',
+          amount:'Rs. 13.13 Lakh onwards'
+        },
+        {
+          id:3,
+          name:'price',
+          icon:'bi bi-clock',
+          amount:'Rs. 13.13 Lakh onwards'
+        },
+        {
+          id:4,
+          name:'price',
+          icon:'bi bi-clock',
+          amount:'Rs. 13.13 Lakh onwards'
+        },
+        {
+          id:5,
+          name:'price',
+          icon:'bi bi-clock',
+          amount:'Rs. 13.13 Lakh onwards'
+        },
+        {
+          id:6,
+          name:'price',
+          icon:'bi bi-clock',
+          amount:'Rs. 13.13 Lakh onwards'
+        },
+
+      ],
+
+      carTools:[
+        {
+          id:1,
+          title:'Instant Car Lone',
+          icon:'bi bi-clock',
+          message:'Apply and best car loan with in minute',
+        },
+        {
+          id:2,
+          title:'Locate delears',
+          icon:'bi bi-clock',
+          message:'Locate Honda dealers',
+        },
+        {
+          id:3,
+          title:'Honde Cars',
+          icon:'bi bi-clock',
+          message:'Explore other Honda cars',
+        },
       ]
     };
   },
@@ -252,5 +354,15 @@ export default {
     StarRating,
     Tabs,
   },
+
+  computed:{
+    carListView(){
+      if(this.show){
+        return this.cardetails;
+      }else{
+        return this.cardetails.slice(0,3);
+      }
+    }
+  }
 };
 </script>
