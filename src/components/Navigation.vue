@@ -8,7 +8,7 @@
             <router-link class="text-sm font-bold justify-center text-white tracking-wider p-5" to="/">Home</router-link> 
         </li>
         <li class=" rounded-xl bg-white border-2  border-white  mx-2 h-8">
-            <router-link class="text-sm font-bold justify-center text-red tracking-wider p-5" to="/about">About</router-link> 
+            <router-link class="text-sm font-bold justify-center text-red tracking-wider p-5" to="/land">About</router-link> 
         </li>
     </ul>
   </div>

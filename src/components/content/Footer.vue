@@ -4,8 +4,10 @@
     <div class="w-full h-full sm:h-full md:h-[330px] lg:h-[330px] xl:h-[330px] bg-gray-300 block sm:block md:flex lg:flex xl:flex">
         <!-- left -->
         <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 h-full block py-2 sm:py-2 md:py-0 lg:py-0 xl:py-0">
-            <img src="https://static.vecteezy.com/system/resources/previews/013/923/539/original/car-logo-vehicle-sports-png.png"
+            <router-link to="land">
+                <img src="https://static.vecteezy.com/system/resources/previews/013/923/539/original/car-logo-vehicle-sports-png.png"
                 class="w-32 h-32 ml-20 sm:ml-20 md:ml-10 lg:ml-10 xl:ml-10 " alt="logo" />
+            </router-link>
             <p class="text-sm sm:text-center md:text-center lg:text-start xl:text-start font-medium text-black mx-4">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aspernatur inventore necessitatibus alias
                 illo quisquam fugit magnam doloremque facere ea?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aspernatur inventore necessitatibus alias
