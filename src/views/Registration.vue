@@ -1,7 +1,7 @@
 <template>
-    <div class="login relative bg-yellow-800 py-3">
+    <div class="login relative bg-white py-3">
         <div class="form w-full h-full flex justify-center align-middle my-5">
-            <div class="card w-1/3 h-auto p-2 bg-transparent shadow-lg shadow-red-500  block rounded-xl ring-6 ring-red-700">
+            <div class="card w-1/3 h-auto p-2 bg-yellow-700 opacity-80 shadow-lg shadow-red-500  block rounded-xl ring-6 ring-red-700">
                 <h2 class="text-white font-bold text-lg py-3 flex justify-center italic">Registration Form </h2>
                 <div class="w-full  h-auto  px-4  rounded-md py-1 ">
                     <label class="text-sm text-white font-normal italic py-2">Profile</label>
