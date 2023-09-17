@@ -6,19 +6,6 @@
 
     <div class="main">
       <router-view />
-      <!-- <SimpleMap /> -->
-      <!-- <button v-on:click="map_visible=!map_visible" v-if="!map_visible">Show Map</button>
-
-
-      <div v-if="map_visible"><div id="map"></div><button v-on:click="make_red()">Make Map Red</button></div> -->
-	<!-- <map-component v-if="map_visible"></map-component> -->
-      <!-- <div ref="map" class="map"></div>
-    <button @click="fetchData">Fetch Data</button>
-    <div v-if="data">
-      <h2>Fake API Response:</h2>
-      <pre>{{ data }}</pre>
-    </div> -->
-      <!-- <router-view/> -->
     </div>
 <Footer />
   </div>

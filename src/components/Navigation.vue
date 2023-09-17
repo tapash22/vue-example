@@ -4,10 +4,10 @@
         Example Vue
     </a>
     <ul class="w-3/4 flex justify-end items-center p-2 bg-red-400 opacity-100 ">
-        <li class=" rounded-xl bg-transparent border-2  border-red-700  mx-2 h-8">
+        <li class="rounded-xl bg-transparent border-2  border-red-700  mx-2 h-8">
             <router-link class="text-sm font-bold justify-center text-white tracking-wider p-5" to="/">Home</router-link> 
         </li>
-        <li class=" rounded-xl bg-white border-2  border-white  mx-2 h-8">
+        <li class="rounded-xl bg-white border-2  border-white  mx-2 h-8">
             <router-link class="text-sm font-bold justify-center text-red tracking-wider p-5" to="/land">About</router-link> 
         </li>
     </ul>

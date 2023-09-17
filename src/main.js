@@ -16,26 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import './style.css';
 
-// import VueMapbox from "vue-mapbox";
-// import Mapbox from "mapbox-gl";
-
-
-
 Vue.config.productionTip = false;
-
-
-
-// this.labelsObject = [... new Set(res.data.map(data => data.albumId))];
-//         const obj = {};
-//         this.labelsObject.forEach((arrVal) => {
-//           obj[arrVal] = res.data.filter(data => data.albumId == arrVal).length;
-
-//         });
-//         this.chartData.labels = this.labelsObject;
-//         this.chartData.datasets[0].data = Object.values(obj);
-
-//         console.log(obj);
-
 
 new Vue({
   router,
