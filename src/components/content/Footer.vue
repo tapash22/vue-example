@@ -1,7 +1,7 @@
 <template>
 
     <div class="block">
-    <div class="w-full h-full sm:h-full md:h-[330px] lg:h-[330px] xl:h-[330px] bg-gray-300 block sm:block md:flex lg:flex xl:flex">
+    <div class="w-full h-full sm:h-full md:h-[330px] lg:h-[330px] xl:h-[330px] bg-gray-200 block sm:block md:flex lg:flex xl:flex">
         <!-- left -->
         <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 h-full block py-2 sm:py-2 md:py-0 lg:py-0 xl:py-0">
             <router-link to="land">
@@ -113,9 +113,9 @@
         </div>
         <!-- right end -->
     </div>
-    <div class="flex justify-center py-1">
-        <p class="text-sm font-light text-black ">
-            &copy; All Right reserved.
+    <div class="flex justify-center py-2 bg-gray-400 align-center">
+        <p class="text-sm font-medium text-white ">
+           <span class="text-xl"> &copy;</span>  All Right reserved.
         </p>
     </div>
 </div>

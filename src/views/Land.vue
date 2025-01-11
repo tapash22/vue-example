@@ -1,146 +1,48 @@
 <template>
-  <div class="land w-full p-2 bg-gray-300">
+  <div class="land w-full p-5 bg-gray-300">
     <div class="grid grid-cols-3 gap-4 mx-5 my-2">
       <div
-        class="bg-white ring-1 ring-gray-500 rounded-sm p-3 cursor-pointer"
+        class="bg-transparent rounded-sm  cursor-pointer py-3"
         v-for="lands in landDetails"
         :key="lands.id"
-
-        @mouseenter="showModel = true"
-        @mouseleave="showModel = false"
       >
         <div
-          class="ring-1 ring-gray-500 rounded-sm p-3 flex justify-center align-middle"
+          class="rounded-2xl flex justify-center align-middle"
         >
-          <div class="bg-white block">
-            <h6
-              class="text-xl font-semibold italic text-black flex justify-center"
-            >
-              {{ lands.name }}
-            </h6>
-            <p
-              class="text-sm font-normal text-black px-2 leading-tight flex text-justify justify-center py-4"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur odit numquam praesentium at quibusdam? Eius corrupti
-              id ibus. Accusantium, vel. Reprehenderit quaerat
-            </p>
+          <div class="bg-transparent block ">
+           <div class="flex justify-center align-middle relative h-28 w-full ring-1 ring-yellow-700 rounded-t-full">
+            <div class="absolute w-24 h-36  rounded-full flex justify-center align-middle overflow-auto scale-150 " >
+              <img src="https://static.vecteezy.com/system/resources/previews/013/923/539/original/car-logo-vehicle-sports-png.png"
+            class="bg-cover overflow-auto" alt="logo" />
+            </div>
+           </div>
+           <div class="bg-white rounded-b-2xl p-3 z-20">
+             <h6
+               class="text-xl font-semibold italic text-black flex justify-center "
+             >
+               {{ lands.name }}
+             </h6>
+             <p
+               class="text-sm font-normal text-black px-2 leading-tight flex text-justify justify-center py-4"
+             >
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Consectetur odit numquam praesentium at quibusdam? Eius corrupti
+               id ibus. Accusantium, vel. Reprehenderit quaerat
+             </p>
+           </div>
           </div>
         </div>
         
       </div>
 
-
-
     </div>
 
-    <!-- modal start -->
-<div v-if="showModel" style="z-index: 99; " class="flex justify-center align-middle">
-    <div class="bg-white w-[400px] h-[250px] p-2 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-lg absolute">
-        <div class="w-full block py-5 px-2">
-            <h5 class="text-xl font-semibold italic text-black flex justify-center">
-                Owner Name
-            </h5>
-            <p class="text-sm font-normal text-black px-2 leading-tight flex text-justify justify-center py-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quos amet distinctio ratione corporis, totam error dicta quo id dignissimos.
-            </p>
-            <div class="flex justify-end ">
-                <button class="text-sm font-medium text-white bg-gray-500 rounded-sm px-2 py-2 ">
-                    Close
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <div
-      
-      id="defaultModal"
-      tabindex="-1"
-      aria-hidden="true"
-      class="fixed top-0 left-0 right-0 z-100 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
-    >
-      <div class="relative w-full max-w-2xl max-h-full">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-          <!-- Modal header -->
-          <div
-            class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
-          >
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Terms of Service
-            </h3>
-            <button
-              type="button"
-              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-              data-modal-hide="defaultModal"
-            >
-              <svg
-                class="w-3 h-3"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 14"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                />
-              </svg>
-              <span class="sr-only">Close modal</span>
-            </button>
-          </div>
-          <!-- Modal body -->
-          <div class="p-6 space-y-6">
-            <p
-              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-            >
-              With less than a month to go before the European Union enacts new
-              consumer privacy laws for its citizens, companies around the world
-              are updating their terms of service agreements to comply.
-            </p>
-            <p
-              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-            >
-              The European Union’s General Data Protection Regulation (G.D.P.R.)
-              goes into effect on May 25 and is meant to ensure a common set of
-              data rights in the European Union. It requires organizations to
-              notify users as soon as possible of high-risk data breaches that
-              could personally affect them.
-            </p>
-          </div>
-          <!-- Modal footer -->
-          <div
-            class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
-          >
-            <button
-              data-modal-hide="defaultModal"
-              type="button"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              I accept
-            </button>
-            <button
-              data-modal-hide="defaultModal"
-              type="button"
-              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
-            >
-              Decline
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- modal end -->
   </div>
 </template>
 
 <script>
+import manImage from '@/assets/man.png'
+
 export default {
   data() {
     return {
