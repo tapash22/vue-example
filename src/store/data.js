@@ -112,3 +112,16 @@ export const  categorys = [
     //     image: 'https://img.freepik.com/premium-psd/sport-car-transparent-background-3d-rendering-illustration_494250-40917.jpg'
     // }
   ]
+
+  export const carDetails = [
+    { title: "Body", value: "Sedan" },
+    { title: "Mileage", value: "100mi" },
+    { title: "Transmission", value: "Automatic" },
+    { title: "Fuel Type", value: "Hybrid" },
+    { title: "Engine", value: 3000 },
+    { title: "Year", value: 2015 },
+    { title: "Drive", value: "4WD" },
+    { title: "Exterior Color", value: "Pearl White" },
+    { title: "Interior Color", value: "Jet Red" },
+    { title: "VIN", value: "WDDGJ5HB1CF79" }
+  ]
