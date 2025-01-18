@@ -17,7 +17,7 @@
             class="search block sm:block md:flex lg:flex xl:flex gap-2 justify-center w-full"
           >
             <div
-              class="h-24 ring-4 ring-blue-100  items-center w-full sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12 overflow-hidden rounded-lg"
+              class="h-24 ring-4 ring-blue-100 items-center w-full sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12 overflow-hidden rounded-lg"
             >
               <select
                 class="h-full w-full bg-white text-lg font-medium tracking-wider text-center overflow-hidden"
@@ -166,7 +166,7 @@
         <!-- banner -->
         <div class="w-full py-5">
           <div
-            class="box p-3 bg-black w-full h-[200] hidden sm:block md:flex lg:flex xl:flex opacity-80 shadow-2xl shadow-gray-400 mx-4"
+            class="box p-3 bg-black w-full h-[200] hidden sm:block md:flex lg:flex xl:flex opacity-80 shadow-2xl shadow-gray-400"
           >
             <div class="w-1/2 flex justify-center align-middle">
               <h3
@@ -181,18 +181,21 @@
                 <span class="text-sm font-normal p-0">for your journey</span>
               </h3>
             </div>
-
-            <img
-              src="https://i.ibb.co/Ks3VZYX/vector-car-png-favpng-gpin-VUFdw-Jp91d2ih-TCQu1-Ww-S-removebg-preview.png"
-              class="w-1/2 bg-cover"
-            />
+            <div class="w-1/2 h-full flex justify-center align-middle">
+              <img
+                src="https://i.ibb.co/Ks3VZYX/vector-car-png-favpng-gpin-VUFdw-Jp91d2ih-TCQu1-Ww-S-removebg-preview.png"
+                class="w-1/2 h-1/2 bg-cover"
+              />
+            </div>
           </div>
         </div>
         <!-- banner end -->
         <!-- best seller -->
         <div class="p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full py-5">
           <div class="px-3 w-full">
-            <h2 class="text-3xl font-bold text-black text-center mb-3 uppercase">
+            <h2
+              class="text-3xl font-bold text-black text-center mb-3 uppercase"
+            >
               Best hier for You
             </h2>
             <TopSeller :carLists="carLists" />
@@ -202,12 +205,14 @@
         <!-- must have for every car -->
         <div class="p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full py-5">
           <div class="px-3 w-full">
-            <h2 class="text-3xl font-bold text-black text-center mb-3 uppercase">
+            <h2
+              class="text-3xl font-bold text-black text-center mb-3 uppercase"
+            >
               Must have for every car
             </h2>
-            <div class="flex justify-center">
+            <div class="flex justify-center py-3">
               <p
-                class="text-sm font-normal mb-3 text-center w-full sm:w-full md:w-2/3 lg:w-2/3 xl:w-2/3"
+                class="text-lg font-semibold mb-3 text-center w-full sm:w-full md:w-2/3 lg:w-2/3 xl:w-2/3"
               >
                 Enjoy an entirely new level of driving experience with our
                 in-depth selection of superior car bulbs, brake pads, spark
@@ -241,7 +246,7 @@
           </div>
         </div>
         <!-- must have for every car end -->
-        <div class=" p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full">
+        <div class="p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full">
           <h2 class="text-3xl font-bold text-black text-center mb-3">
             Must have you know
           </h2>
@@ -254,9 +259,8 @@
         <!-- contact us -->
         <div class="p-5 sm:p-2 md:p-5 lg:p-5 xl:p-5 w-full h-full">
           <div class="email block sm:block md:flex lg:flex xl:flex p-5">
-
             <div
-              class="w-full h-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pa-2 gap-3 align-middle flex justify-center  space-x-2 my-auto px-3 sm:px-3 md:px-2 lg:px-0 xl-px-0"
+              class="w-full h-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pa-2 gap-3 align-middle flex justify-center space-x-2 my-auto px-3 sm:px-3 md:px-2 lg:px-0 xl-px-0"
             >
               <div
                 class="ring-8 ring-blue-500 rounded-full flex justify-center items-center border-white pa-2 w-10 sm:w-10 md:w-20 lg:w-24 xl:w-24 h-10 sm:h-10 md:h-20 lg:h-24 xl:h-24 my-auto"
@@ -279,12 +283,16 @@
             <div
               class="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pa-2 flex justify-center h-full"
             >
-              <form class="flex my-auto w-full h-20 border-2 border-red-500 rounded-xl">
+              <form
+                class="flex my-auto w-full h-20 border-2 border-red-500 rounded-xl"
+              >
                 <input
                   class="form-control w-3/4 h-20 text-lg font-bold rounded-l-lg"
                   placeholder="Enter your email"
                 />
-                <button class="w-1/4 bg-red-500 text-2xl uppercase font-medium text-white">
+                <button
+                  class="w-1/4 bg-red-500 text-2xl uppercase font-medium text-white"
+                >
                   Send
                 </button>
               </form>
@@ -292,6 +300,51 @@
           </div>
         </div>
         <!-- contact us end-->
+
+        <!-- car details -->
+        <div class="w-full h-full flex justify-center bg-white p-5">
+          <!-- first part -->
+          <div class="flex justify-center align-middle w-3/4 h-full gap-1">
+            <div class="w-3/4 h-full block">
+              <img
+                src="@/assets/car.jpg"
+                class="scale-100 ring-4 ring-blue-500 rounded-xl"
+              />
+            </div>
+            <div class="w-1/4 h-full block">
+              <div class="card w-full h-auto bg-blue-900 ">
+                <h2
+                  class="uppercase text-lg font-light text-white w-full flex justify-center"
+                >
+                  buy car online
+                </h2>
+                <div
+                  class="w-full h-auto p-4 flex justify-between align-middle"
+                >
+                  <p class="text-sm font-medium text-white uppercase">
+                    buy for
+                    <br />
+                    <span class="text-lg font-bold">$2234</span>
+                  </p>
+                  <span class="font-semibold text-xl text-white">|</span>
+                  <p class="text-sm font-medium text-white uppercase">
+                    buy for
+                    <br />
+                    <span class="text-lg font-bold">$2234</span>
+                  </p>
+                </div>
+                <div class="bg-blue-200 w-full h-auto py-2 flex justify-center align-center">
+<p class="text-lg font-semibold text-black ">instant saving : $5.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- first part end -->
+
+          <div>
+            <!-- car details end -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
