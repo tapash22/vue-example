@@ -5,7 +5,7 @@
       v-for="carList in carLists"
       :key="carList.id"
     >
-      <router-link :to="{ name: 'carDetails', params: { id: carList.id } }">
+      <router-link :to="{ name: 'carFeature', params: { id: carList.id } }">
         <div class="card-body h-full w-full p-0 overflow-hidden">
           <img :src="carList.image" class=" w-full scale-100 bg-cover bg-center" />
         </div>
