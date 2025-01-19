@@ -125,3 +125,43 @@ export const  categorys = [
     { title: "Interior Color", value: "Jet Red" },
     { title: "VIN", value: "WDDGJ5HB1CF79" }
   ]
+
+  export const features = [
+    "ABS",
+    "Auxiliary heating",
+    "Bluetooth",
+    "CD player",
+    "Central locking",
+    "ESP",
+    "Full LED headlights",
+    "LED dynamic taillights",
+    "Tire pressure monitoring system",
+    "Nitro",
+    "Storage package",
+    "Turbo-engine"
+  ];
+
+  export const featuresData = {
+    group1: {
+      title: "Nulla consequat enim",
+      items: [
+        "Sed venenatis risus eleifend solis nec felis mollis",
+        "Fusce eleifend folla prente laoreet dui eget aliquet",
+        "Sed venenatis risus nec osmet covar felis mollis",
+        "Gusce eusce eleifend aet laoreet dui eget aliquet",
+        "Teros eam in nulla consectetur, lonter guel suscipit",
+      ],
+    },
+    group2: {
+      title: "Consequat massa",
+      items: [
+        "Sed venenatis risus eleifend solis nec felis mollis",
+        "Fusce eleifend folla prente laoreet dui eget aliquet",
+        "Sed venenatis risus nec osmet covar felis mollis",
+        "Gusce eusce eleifend aet laoreet dui eget aliquet",
+        "Teros eam in nulla consectetur, lonter guel suscipit",
+      ],
+    },
+  };
+  
+  
