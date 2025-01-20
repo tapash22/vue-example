@@ -163,5 +163,117 @@ export const  categorys = [
       ],
     },
   };
+
+  export const engineDetails = [
+    {
+      id:1,
+      title: 'Engine',
+      icon: 'bi bi-car-front-fill',
+      child: [
+        { id: 1, title: 'LAYOUT', value: 'V 4' },
+        { id: 2, title: 'ENGINE VOLUME', value: '3.2 L' },
+        { id: 3, title: 'TYPE OF DRIVE', value: 'RWD' },
+        { id: 4, title: 'HORSE POWER', value: '230 hp' },
+        { id: 5, title: 'POWER', value: '450 kW' },
+        { id: 6, title: 'TORQUE', value: '627' },
+        { id: 7, title: 'COMPRESSION RATIO', value: '8.6 – 16.2 :1' }
+      ]
+    },
+    {
+      id:2,
+      title: 'Performance',
+      icon: 'bi bi-speedometer',
+      child: [
+        { id: 1, title: 'TOP TRACK SPEED', value: '173 mph' },
+        { id: 2, title: '0 - 70 MPH', value: '5.3 s' }
+      ]
+    },
+    {
+      id:3,
+      title: 'Transmission',
+      icon: 'bi bi-gear-wide-connected',
+      child: [
+        { id: 1, title: 'TYPE', value: 'Automatic' },
+        { id: 2, title: 'NUMBER OF GEARS', value: '6' }
+      ]
+    }
+  ];
+
+ export const designView = [
+    {
+      id: 1,
+      title: "INTERIOR DESIGN",
+      child: [
+        "ABS",
+        "Auxiliary heating",
+        "Bluetooth",
+        "CD player",
+        "Central locking",
+        "ESP",
+        "Full LED headlights",
+        "LED dynamic taillights",
+        "Tire pressure monitoring system",
+        "Nitro",
+        "Storage package",
+        "Turbo-engine"
+      ]
+    },
+    {
+      id: 2,
+      title: "SAFETY FEATURES",
+      child: [
+        "ABS",
+        "Auxiliary heating",
+        "Bluetooth",
+        "CD player",
+        "Central locking",
+        "ESP",
+        "Full LED headlights",
+        "LED dynamic taillights",
+        "Tire pressure monitoring system",
+        "Nitro",
+        "Storage package",
+        "Turbo-engine"
+      ]
+    },
+    {
+      id: 3,
+      title: "EXTERIOR FEATURES",
+      child: [
+        "ABS",
+        "Auxiliary heating",
+        "Bluetooth",
+        "CD player",
+        "Central locking",
+        "ESP",
+        "Full LED headlights",
+        "LED dynamic taillights",
+        "Tire pressure monitoring system",
+        "Nitro",
+        "Storage package",
+        "Turbo-engine"
+      ]
+    },
+    {
+      id: 4,
+      title: "EXTRA FEATURES",
+      child: [
+        "ABS",
+        "Auxiliary heating",
+        "Bluetooth",
+        "CD player",
+        "Central locking",
+        "ESP",
+        "Full LED headlights",
+        "LED dynamic taillights",
+        "Tire pressure monitoring system",
+        "Nitro",
+        "Storage package",
+        "Turbo-engine"
+      ]
+    }
+  ];
+  
+  
   
   

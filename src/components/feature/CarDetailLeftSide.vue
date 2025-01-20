@@ -58,7 +58,7 @@
 
     <!-- features -->
     <div class="w-full h-full block p-3">
-      <h2 class="text-2xl font-bold text-black py-2">EXTRA FEATURES</h2>
+      <h2 class="text-xl font-bold text-black py-2">EXTRA FEATURES</h2>
 
       <ul class="grid grid-cols-4 gap-3 py-2">
         <li
@@ -77,40 +77,132 @@
     </div>
     <!-- features end -->
 
+    <div class="w-full h-full p-3">
+      <!-- Grid Container -->
+      <div class="grid grid-cols-2 gap-6">
+        <!-- First Column: Single Block -->
+        <div>
+          <h3 class="flex justify-start items-center gap-2">
+            <i
+              :class="engineDetails[0].icon"
+              class="text-3xl text-blue-300"
+            ></i>
+            <span class="text-lg font-bold text-black">{{
+              engineDetails[0].title
+            }}</span>
+          </h3>
+          <ul class="block w-full p-2">
+            <li
+              v-for="(feature, index) in engineDetails[0].child"
+              :key="index"
+              class="flex justify-between py-2 border-b-2 border-blue-300"
+            >
+              <span class="font-semibold text-sm text-black">{{
+                feature.title
+              }}</span>
+              <span class="text-black font-semibold text-sm">{{
+                feature.value
+              }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Second Column: Two Stacked Blocks -->
+        <div class="grid grid-rows-2 gap-6 w-full">
+          <!-- Dynamic Stacked Blocks -->
+          <div
+            v-for="(block, blockIndex) in engineDetails.slice(1)"
+            :key="blockIndex"
+            class="w-full"
+          >
+            <h3 class="flex justify-start items-center gap-2">
+              <i :class="block.icon" class="text-3xl text-blue-300"></i>
+              <span class="text-lg font-bold text-black">{{
+                block.title
+              }}</span>
+            </h3>
+            <ul class="block w-full p-2">
+              <li
+                v-for="(feature, index) in block.child"
+                :key="index"
+                class="flex justify-between py-2 border-b-2 border-blue-300"
+              >
+                <span class="font-semibold text-sm text-black">{{
+                  feature.title
+                }}</span>
+                <span class="text-black font-semibold text-sm">{{
+                  feature.value
+                }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- feature option -->
     <div class="w-full h-full block p-3">
       <h2 class="text-2xl font-bold text-black py-2">Features & Options</h2>
       <div class="grid grid-cols-2 gap-8">
-      <!-- Loop through groups -->
-      <div v-for="(group, groupName) in featuresData" :key="groupName">
-        <!-- Group title -->
-        <h2 class="text-sm font-bold py-2">{{ group.title }}</h2>
-        <!-- List items -->
-        <ul class="space-y-2">
-          <li
-            v-for="(item, index) in group.items"
-            :key="index"
-            class="flex items-start gap-2"
-          >
-            <i class="bi bi-check-circle text-blue-500"></i>
-            <span class="text-base font-medium">{{ item }}</span>
-          </li>
-        </ul>
+        <!-- Loop through groups -->
+        <div v-for="(group, groupName) in featuresData" :key="groupName">
+          <!-- Group title -->
+          <h2 class="text-sm font-bold py-2">{{ group.title }}</h2>
+          <!-- List items -->
+          <ul class="space-y-2">
+            <li
+              v-for="(item, index) in group.items"
+              :key="index"
+              class="flex items-start gap-2"
+            >
+              <i class="bi bi-check-circle text-blue-500"></i>
+              <span class="text-base font-medium">{{ item }}</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-    </div>
     <!-- feature option end -->
+    <hr class="my-3 px-5" />
+
+    <!-- design -->
+    <div class="w-full h-full p-3">
+      <div class="flex justify-start items-center gap-2">
+        <div class="w-1/4 h-auto block" v-for="design in designView" :key="design.id">
+          <h2 class="text-sm font-semibold text-black py-2">
+            {{ design.title }}
+          </h2>
+            <ul class="block">
+              <li class="flex justify-start items-center gap-2 py-1" v-for="d in design.child" :key="d">
+                <i class="bi bi-check-circle text-lg font-medium text-blue-400"></i>
+                <p class="text-sm font-medium text-black">
+                  {{ d }}
+                </p>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- design end-->
+
   </div>
 </template>
 
 <script>
-import { featuresData,features } from "@/store/data";
+import {
+  featuresData,
+  features,
+  engineDetails,
+  designView,
+} from "@/store/data";
 
 export default {
   data() {
     return {
-        featuresData,
-        features
+      featuresData,
+      features,
+      engineDetails,
+      designView,
     };
   },
 };
