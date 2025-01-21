@@ -1,5 +1,5 @@
 <template>
-    <div class="sub-navigation flex justify-between  w-full py-0">
+    <div class="sub-navigation flex justify-between   w-full py-0">
         <div class="list flex justify-start w-5/6 pl-4 h-16  bg-gray-950 mt-3">
             <ul class="ul">
                 <li class="li" v-for="nav in navList" :key="nav.id">

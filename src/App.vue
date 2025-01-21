@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <Navigation />
     <!-- <HeaderView />
     <SubNavigation /> -->
-
+    <HeaderView />
     <div class="main">
+      <!-- <Navigation /> -->
       <router-view />
     </div>
 <Footer />

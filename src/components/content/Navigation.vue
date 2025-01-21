@@ -3,11 +3,11 @@
     <nav class="nav">
       <ul class="ul">
         <li class="li">
-          <i class="bi bi-geo-alt p-2"></i>
+          <i class="bi bi-geo-alt  text-2xl font-semibold text-white"></i>
           <router-link to="" class="span">Store Direction</router-link>
         </li>
         <li class="li border-r-2">
-          <i class="bi bi-box p-2"></i>
+          <i class="bi bi-box text-2xl font-semibold text-white"></i>
           <router-link to="" class="span">Track Your Order</router-link>
         </li>
       </ul>
