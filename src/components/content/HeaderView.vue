@@ -4,11 +4,13 @@
       class="box w-full h-32 flex justify-center items-center gap-2 bg-blue-100"
     >
       <div class="logo w-2/12 flex justify-center">
+        <<router-link to="/" >
         <img
           src="https://static.vecteezy.com/system/resources/previews/013/923/539/original/car-logo-vehicle-sports-png.png"
           class="w-40 h-40"
           alt="logo"
         />
+      </router-link>
       </div>
       <div class="search w-7/12">
         <div class="search-box">
