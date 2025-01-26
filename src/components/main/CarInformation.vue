@@ -1,9 +1,9 @@
 <template>
-  <div class="p-2 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full">
-    <h2 class="text-3xl font-bold text-black text-center mb-3">
+  <div class="p-3 sm:p-2 md:p-3 lg:p-5 xl:p-5 w-full h-full bg-gray-900 opacity-70 shadow-xl shadow-gray-500">
+    <h2 class="text-3xl font-bold text-white text-center mb-3">
       Must have you know
     </h2>
-    <div class="block sm:block md:flex lg:flex xl:flex justify-center mx-2">
+    <div class="block sm:block md:flex lg:flex xl:flex justify-center mx-2 ">
       <Carousel />
     </div>
   </div>
