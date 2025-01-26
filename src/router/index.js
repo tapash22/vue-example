@@ -47,9 +47,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "carView" */ '../views/CarView.vue')
   },
   {
-    path: '/carDetails/:id',
-    name: 'carDetails',
-    component: () => import(/* webpackChunkName: "carDetails" */ '../views/CarDetails.vue')
+    path: '/carFeature/:id',
+    name: 'carFeature',
+    component: () => import(/* webpackChunkName: "carDetails" */ '../views/CarFeature.vue')
   }
 ]
 

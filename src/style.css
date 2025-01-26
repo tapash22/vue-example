@@ -4,16 +4,16 @@
 
 @layer base {
     .nav{
-        @apply px-4  h-12 bg-gray-100 flex justify-between p-0 m-0;
+        @apply px-4  h-16 bg-blue-200 flex justify-between p-0 m-0;
     }
     .ul{
         @apply flex p-0 m-0;
     }
     .li{
-      @apply border-l-2 p-0 m-0 border-gray-200 flex justify-around items-center;
+      @apply border-l-2 p-2 m-0 border-white flex justify-around items-center gap-2;
     }
     .span {
-        @apply text-sm font-mono p-2;
+        @apply text-lg font-normal p-2;
     }
     .select{
         @apply border-r-2 border-l-2 border-gray-300 px-2 w-3/12 bg-white text-sm font-medium;
@@ -22,12 +22,13 @@
         @apply border-2 w-full h-12 border-gray-300 rounded-tl-lg rounded-bl-lg flex;
     }
     .list-box{
-        @apply border-2 border-gray-400 w-12 h-12 flex justify-center items-center rounded-md;
+        @apply ring-4 ring-white w-12 h-12 flex justify-center items-center rounded-md;
     }
     .list-box-icon{
-        @apply font-bold text-2xl text-gray-500 p-2;
+        @apply text-white font-bold text-4xl p-2;
     }
     .search-icon{
         @apply text-xl text-white font-bold;
     }
-}
+    
+} 

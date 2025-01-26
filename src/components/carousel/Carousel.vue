@@ -6,7 +6,7 @@
         [1200,3]
     ]" :navigate-to="someLocalProperty" :mouse-drag="false" paginationActiveColor="red" paginationSize="10" paginationPadding="2" paginationColor="blue">
         <slide style="padding:10px;" v-for="i in 6" :key="i" >
-            <div class="card w-full h-[300px] bg-red-500 p-2 flex justify-center items-center" >
+            <div class="card w-full h-[300px] bg-red-200 p-2 flex justify-center items-center rounded-xl" >
                 <h2 class="text-4xl font-extrabold text-center text-white">
                     Do you know
                 </h2>
