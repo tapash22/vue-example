@@ -13,28 +13,26 @@
     paginationPadding="2"
     paginationColor="blue"
   >
-    <slide style="padding: 10px" v-for="i in 6" :key="i">
+    <slide style="padding: 10px" v-for="i in expartDetails" :key="i.id">
       <div
-        class="card w-full h-[300px] bg-transparent p-2 flex justify-center items-center "
+        class="card w-full h-auto bg-transparent p-2 flex justify-center items-center"
       >
-        <div class="block ">
-          <div class="flex justify-center items-center">
+        <div class="block">
+          <div class="flex justify-center items-center p-2">
             <img
-              src="https://cdn.vuetifyjs.com/images/john.jpg"
-              class="w-20 h-20 ring-2 ring-gray-500 rounded-full"
+              :src="i.image"
+              class="w-36 h-36 ring-2 ring-gray-500 rounded-full"
             />
           </div>
-          <p class="text-lg font-medium text-black text-justify p-4 m-1 bg-white rounded-xl">
+          <p
+            class="text-lg font-medium text-black text-justify p-4 bg-white rounded-t-xl"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
             recusandae ipsam doloremque totam ut consequatur voluptate illo,
             odio delectus non, quae ex nesciunt temporibus ducimus sed dolores.
             Dolores, esse obcaecati!
           </p>
-          <ul class="w-full h-auto flex justify-center items-center p-2 gap-3">
-            <li class="w-auto h-auto p-1" v-for="icon in iconlist" :key="icon">
-              <i class="text-xl font-bold text-blue-300" :class="icon"></i>
-            </li>
-          </ul>
+          <IconList :icon-list="i.iconList" />
         </div>
       </div>
     </slide>
@@ -43,22 +41,22 @@
 
 <script>
 import { Carousel, Slide } from "vue-carousel";
+import { expartDetails } from "@/store/data";
+import IconList from "./IconList.vue";
 
 export default {
   data() {
     return {
-      iconlist: [
-        "bi bi-border-width",
-        "bi bi-heart",
-        "bi bi-person",
-        "bi bi-cart3",
-      ],
+      expartDetails,
+      hoveredIcon: null,
     };
   },
   components: {
     Carousel,
     Slide,
+    IconList
   },
+
 };
 </script>
 

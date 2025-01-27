@@ -348,3 +348,174 @@ export const carGallery = [
   { id: 1, image: require("@/assets/images/second.jpg") },
   { id: 1, image: require("@/assets/images/third.jpg") },
 ]
+
+export const expartDetails =[
+  {
+    id:1,
+    title:'tapsh paul',
+    position:'Car Expart',
+    image: require("@/assets/man.png"),
+    iconList : [
+      {
+        id: 1,
+        icon: "bi bi-envelope-fill",
+        data: "tapasp263@gmail.com",
+      },
+      {
+        id: 2,
+        icon: "bi bi-phone-fill",
+        data: "+8801674345763",
+      },
+      {
+        id: 3,
+        icon: "bi bi-facebook",
+        data: "facebook.com/tapash22",
+      },
+      {
+        id: 4,
+        icon: "bi bi-linkedin",
+        data: "linkedin.com/tapash22",
+      },
+    ]
+  },
+  {
+    id:2,
+    title:'tapsh paul',
+    position:'Car Expart',
+    image: require("@/assets/man.png"),
+    iconList : [
+      {
+        id: 1,
+        icon: "bi bi-envelope-fill",
+        data: "tapasp263@gmail.com",
+      },
+      {
+        id: 2,
+        icon: "bi bi-phone-fill",
+        data: "+8801674345763",
+      },
+      {
+        id: 3,
+        icon: "bi bi-facebook",
+        data: "facebook.com/tapash22",
+      },
+      {
+        id: 4,
+        icon: "bi bi-linkedin",
+        data: "linkedin.com/tapash22",
+      },
+    ]
+  },
+  {
+    id:3,
+    title:'tapsh paul',
+    position:'Car Expart',
+    image: require("@/assets/man.png"),
+    iconList : [
+      {
+        id: 1,
+        icon: "bi bi-envelope-fill",
+        data: "tapasp263@gmail.com",
+      },
+      {
+        id: 2,
+        icon: "bi bi-phone-fill",
+        data: "+8801674345763",
+      },
+      {
+        id: 3,
+        icon: "bi bi-facebook",
+        data: "facebook.com/tapash22",
+      },
+      {
+        id: 4,
+        icon: "bi bi-linkedin",
+        data: "linkedin.com/tapash22",
+      },
+    ]
+  },
+  {
+    id:4,
+    title:'tapsh paul',
+    position:'Car Expart',
+    image: require("@/assets/2.jpg"),
+    iconList : [
+      {
+        id: 1,
+        icon: "bi bi-envelope-fill",
+        data: "tapasp263@gmail.com",
+      },
+      {
+        id: 2,
+        icon: "bi bi-phone-fill",
+        data: "+8801674345763",
+      },
+      {
+        id: 3,
+        icon: "bi bi-facebook",
+        data: "facebook.com/tapash22",
+      },
+      {
+        id: 4,
+        icon: "bi bi-linkedin",
+        data: "linkedin.com/tapash22",
+      },
+    ]
+  },
+  {
+    id:5,
+    title:'tapsh paul',
+    position:'Car Expart',
+    image: require("@/assets/man.png"),
+    iconList : [
+      {
+        id: 1,
+        icon: "bi bi-envelope-fill",
+        data: "tapasp263@gmail.com",
+      },
+      {
+        id: 2,
+        icon: "bi bi-phone-fill",
+        data: "+8801674345763",
+      },
+      {
+        id: 3,
+        icon: "bi bi-facebook",
+        data: "facebook.com/tapash22",
+      },
+      {
+        id: 4,
+        icon: "bi bi-linkedin",
+        data: "linkedin.com/tapash22",
+      },
+    ]
+  },
+  {
+    id:6,
+    title:'tapsh paul',
+    position:'Car Expart',
+    image: require("@/assets/man.png"),
+    iconList : [
+      {
+        id: 1,
+        icon: "bi bi-envelope-fill-fill",
+        data: "tapasp263@gmail.com",
+      },
+      {
+        id: 2,
+        icon: "bi bi-phone-fill-fill",
+        data: "+8801674345763",
+      },
+      {
+        id: 3,
+        icon: "bi bi-facebook",
+        data: "facebook.com/tapash22",
+      },
+      {
+        id: 4,
+        icon: "bi bi-linkedin",
+        data: "linkedin.com/tapash22",
+      },
+    ]
+  }
+];
