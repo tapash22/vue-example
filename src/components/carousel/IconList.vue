@@ -1,6 +1,6 @@
 <template>
   <ul
-    class="w-full h-auto flex justify-center items-center p-2 gap-3 bg-white rounded-b-xl relative"
+    class="w-full h-auto flex justify-center items-center p-2 gap-3 bg-gray-400 rounded-b-xl relative"
   >
     <li
       class="w-auto h-auto p-1 relative"
@@ -12,7 +12,7 @@
       <p
         v-if="hoveredIcon === icon.id"
         :class="[
-          'h-auto p-1 rounded-xl ring-1 -top-8 -left-32 ring-white absolute bg-blue-400 text-black font-bold text-xl text-center ',
+          'h-auto p-1 rounded-full ring-2 -top-10 -left-32 ring-blue-800 absolute bg-gray-400 text-black font-medium text-lg text-center z-40 ',
         ]"
         :style="{ width: getDynamicWidth(icon.data) + 'px' }"
       >

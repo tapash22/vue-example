@@ -382,7 +382,7 @@ export const expartDetails =[
     id:2,
     title:'tapsh paul',
     position:'Car Expart',
-    image: require("@/assets/man.png"),
+    image: require("@/assets/man2.png"),
     iconList : [
       {
         id: 1,
@@ -410,7 +410,7 @@ export const expartDetails =[
     id:3,
     title:'tapsh paul',
     position:'Car Expart',
-    image: require("@/assets/man.png"),
+    image: require("@/assets/man4.png"),
     iconList : [
       {
         id: 1,
@@ -438,7 +438,7 @@ export const expartDetails =[
     id:4,
     title:'tapsh paul',
     position:'Car Expart',
-    image: require("@/assets/2.jpg"),
+    image: require("@/assets/man4.png"),
     iconList : [
       {
         id: 1,
@@ -494,7 +494,7 @@ export const expartDetails =[
     id:6,
     title:'tapsh paul',
     position:'Car Expart',
-    image: require("@/assets/man.png"),
+    image: require("@/assets/man1.png"),
     iconList : [
       {
         id: 1,

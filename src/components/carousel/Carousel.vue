@@ -10,7 +10,7 @@
     :mouse-drag="false"
     paginationActiveColor="red"
     paginationSize="10"
-    paginationPadding="2"
+    :paginationPadding="2"
     paginationColor="blue"
   >
     <slide style="padding: 10px" v-for="i in expartDetails" :key="i.id">
@@ -18,10 +18,10 @@
         class="card w-full h-auto bg-transparent p-2 flex justify-center items-center"
       >
         <div class="block">
-          <div class="flex justify-center items-center p-2">
+          <div class=" w-full flex justify-center items-center">
             <img
               :src="i.image"
-              class="w-36 h-36 ring-2 ring-gray-500 rounded-full"
+              class="w-1/2 h-36 "
             />
           </div>
           <p

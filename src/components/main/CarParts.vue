@@ -25,17 +25,17 @@
                 v-for="part in parts"
                 :key="part.id"
               >
-                <!-- <router-link :to="{ name: 'carDetails', params: { id: carList.id } }"> -->
-                <div class="card-body h-60 w-full p-0 overflow-hidden">
-                  <img :src="part.image" class="h-full w-full" />
-                </div>
-                <!-- </router-link> -->
-                <div class="card-text w-full h-auto ring-2 ring-blue-100">
+              <div class="card-body h-60 w-full p-0 overflow-hidden">
+                <img :src="part.image" class="h-full w-full" />
+              </div>
+              <div class="card-text w-full h-auto ring-2 ring-blue-100">
+                <router-link :to="{ name: 'carPartDetails', params: { id: part.id } }">
                   <h3
-                    class="uppercase text-lg font-bold py-2 text-black text-center bg-white"
+                  class="uppercase text-lg font-bold py-2 text-black text-center bg-white"
                   >
-                    {{ part.name }}
-                  </h3>
+                  {{ part.name }}
+                </h3>
+              </router-link>
                 </div>
               </div>
             </div>
