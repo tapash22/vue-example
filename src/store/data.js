@@ -105,21 +105,25 @@ export const parts = [
     id: 1,
     name: "Brake Pads",
     image: require("@/assets/1.jpg"),
+    price:123
   },
   {
     id: 2,
     name: "Air Filter",
     image: require("@/assets/3.jpg"),
+    price:123
   },
   {
     id: 3,
     name: "Moto Oils",
     image: require("@/assets/4.jpg"),
+    price:123
   },
   {
     id: 4,
     name: "Custom Wheel",
     image: require("@/assets/2.jpg"),
+    price:123
   },
   // {
   //     id: 5,
@@ -321,7 +325,6 @@ export const aboutInfo = [
   },
 ];
 
-
 export const carGallery = [
   { id: 1, image: require("@/assets/images/car_i.jpg") },
   { id: 1, image: require("@/assets/images/first.jpg") },
@@ -347,15 +350,15 @@ export const carGallery = [
   { id: 1, image: require("@/assets/images/first.jpg") },
   { id: 1, image: require("@/assets/images/second.jpg") },
   { id: 1, image: require("@/assets/images/third.jpg") },
-]
+];
 
-export const expartDetails =[
+export const expartDetails = [
   {
-    id:1,
-    title:'tapsh paul',
-    position:'Car Expart',
+    id: 1,
+    title: "tapsh paul",
+    position: "Car Expart",
     image: require("@/assets/man.png"),
-    iconList : [
+    iconList: [
       {
         id: 1,
         icon: "bi bi-envelope-fill",
@@ -376,14 +379,14 @@ export const expartDetails =[
         icon: "bi bi-linkedin",
         data: "linkedin.com/tapash22",
       },
-    ]
+    ],
   },
   {
-    id:2,
-    title:'tapsh paul',
-    position:'Car Expart',
+    id: 2,
+    title: "tapsh paul",
+    position: "Car Expart",
     image: require("@/assets/man2.png"),
-    iconList : [
+    iconList: [
       {
         id: 1,
         icon: "bi bi-envelope-fill",
@@ -404,14 +407,14 @@ export const expartDetails =[
         icon: "bi bi-linkedin",
         data: "linkedin.com/tapash22",
       },
-    ]
+    ],
   },
   {
-    id:3,
-    title:'tapsh paul',
-    position:'Car Expart',
+    id: 3,
+    title: "tapsh paul",
+    position: "Car Expart",
     image: require("@/assets/man4.png"),
-    iconList : [
+    iconList: [
       {
         id: 1,
         icon: "bi bi-envelope-fill",
@@ -432,14 +435,14 @@ export const expartDetails =[
         icon: "bi bi-linkedin",
         data: "linkedin.com/tapash22",
       },
-    ]
+    ],
   },
   {
-    id:4,
-    title:'tapsh paul',
-    position:'Car Expart',
+    id: 4,
+    title: "tapsh paul",
+    position: "Car Expart",
     image: require("@/assets/man4.png"),
-    iconList : [
+    iconList: [
       {
         id: 1,
         icon: "bi bi-envelope-fill",
@@ -460,14 +463,14 @@ export const expartDetails =[
         icon: "bi bi-linkedin",
         data: "linkedin.com/tapash22",
       },
-    ]
+    ],
   },
   {
-    id:5,
-    title:'tapsh paul',
-    position:'Car Expart',
+    id: 5,
+    title: "tapsh paul",
+    position: "Car Expart",
     image: require("@/assets/man.png"),
-    iconList : [
+    iconList: [
       {
         id: 1,
         icon: "bi bi-envelope-fill",
@@ -488,14 +491,14 @@ export const expartDetails =[
         icon: "bi bi-linkedin",
         data: "linkedin.com/tapash22",
       },
-    ]
+    ],
   },
   {
-    id:6,
-    title:'tapsh paul',
-    position:'Car Expart',
+    id: 6,
+    title: "tapsh paul",
+    position: "Car Expart",
     image: require("@/assets/man1.png"),
-    iconList : [
+    iconList: [
       {
         id: 1,
         icon: "bi bi-envelope-fill-fill",
@@ -516,6 +519,29 @@ export const expartDetails =[
         icon: "bi bi-linkedin",
         data: "linkedin.com/tapash22",
       },
-    ]
-  }
+    ],
+  },
+];
+
+export const carParts = [
+  {
+    id:1,
+    title: "SKU",
+    value: "N/A",
+  },
+  {
+    id:2,
+    title: "Categories",
+    value: ["Electronics", "K&N", "Lighting"],
+  },
+  {
+    id:3,
+    title: "Tags",
+    value: ["item", "performance"],
+  },
+  {
+    id:4,
+    title: "Product ID",
+    value: 233,
+  },
 ];
