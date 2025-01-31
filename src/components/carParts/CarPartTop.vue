@@ -81,10 +81,10 @@
         </div>
         <div class="flex justify-start items-center gap-4 px-4 py-3">
           <div
-            class="flex justify-start items-center rounded-lg ring-1 w-24 h-12 p-2"
+            class="flex justify-start items-center rounded-lg ring-1 w-24 h-12 p-1"
           >
             <input
-              class="w-2/3 h-12 px-3 text-2xl font-medium text-black"
+              class="w-2/3 h-12 px-3 text-xl font-medium text-black text-center"
               type="number"
               v-model="count"
             />

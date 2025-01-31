@@ -1,27 +1,134 @@
 <template>
   <div class="bg-white p-3 w-full h-auto">
-    <ul class="flex justify-start items-center p-2 gap-3">
+    <ul class="flex justify-start items-center p-3 gap-3">
       <li
         class="w-auto h-auto text-xl font-medium text-gray-300 cursor-pointer uppercase"
-        v-for="i in 3"
-        :key="i"
-        @click="activeTabs(i)"
+        v-for="carPartTab in carPartTabs"
+        :key="carPartTab.id"
+        @click="activeTabs(carPartTab.id)"
       >
-        {{ i === 1 ? 'first' : i=== 2 ? 'second' : 'third' }}
+        {{
+          carPartTab.id === 1
+            ? "first"
+            : carPartTab.id === 2
+            ? "second"
+            : "third"
+        }}
       </li>
     </ul>
-    <div class="px-3 ease-in-out" v-if="activeIndex === 1">hi</div>
-    <div class="px-3 ease-in-out" v-else-if="activeIndex === 2">this</div>
-    <div class="px-3 ease-in-out" v-else>me</div>
+    <div class="px-3 py-2 ease-in-out" v-if="activeIndex === 1">
+      <p class="text-lg font-normal text-black">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+        error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab
+      </p>
+    </div>
+    <div class="px-3 py-2 ease-in-out" v-else-if="activeIndex === 2">
+      <CarPartsAdditionalInformation
+        :car-part-additional-information="carPartAdditionalInformation"
+      />
+    </div>
+    <div class="px-3 py-2 ease-in-out" v-else>
+      <div class="block">
+        <h2 class="text-xl font-normal text-black text-start uppercase">
+          review for OE Replacement Calipers
+        </h2>
+        <div class="py-4 flex justify-start items-center">
+          <div class="flex justify-start items-center w-auto">
+            <img :src="carPartReviewPerson.image" class="w-32 h-24" />
+          </div>
+          <div class="flex justify-start items-center w-full">
+            <div class="block w-full px-2">
+              <p class="text-lg font-light text-black">
+                {{ carPartReviewPerson.name }} - {{ carPartReviewPerson.date }}
+              </p>
+              <p class="text-lg font-light text-black">
+                {{ carPartReviewPerson.note }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="py-4 flex justify-start items-center w-full">
+          <form class="block w-full">
+            <h2 class="text-2xl font-normal text-black">Add a review</h2>
+            <div class="block w-full my-2">
+              <div class="flex justify-start items-center gap-4">
+                <div class="block w-1/2">
+                  <label class="px-2 py-1 text-lg font-normal text-black">
+                    Name
+                  </label>
+                  <input
+                    class="w-full ring-1 ring-gray-300 rounded-full h-12 px-3 text-xl font-medium text-black text-start"
+                    type="text"
+                  />
+                </div>
+                <div class="block w-1/2">
+                  <label class="px-2 py-1 text-lg font-normal text-black">
+                    Email
+                  </label>
+                  <input
+                    class="w-full ring-1 ring-gray-300 rounded-full h-12 px-3 text-xl font-medium text-black text-start"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div class="block w-full py-2">
+                <label class="px-2 py-1 text-lg font-normal text-black">
+                  Your review
+                </label>
+                <textarea
+                  class="w-full ring-1 ring-gray-300 rounded-lg h-24 px-3 py-2 text-xl font-medium text-black text-start"
+                  type="text"
+                />
+              </div>
+              <div class="flex justify-start w-full py-3 px-2">
+                <input type="checkbox" class="" />
+                <p class="text-sm font-light text-gray-500 px-2">
+                  I agree that my submitted data is being collected and stored. For further details on handling user data, see our Privacy Policy.
+                </p>
+              </div>
+              <div class="flex justify-start w-full py-2">
+                <button
+                  class="px-4 py-3 rounded-full bg-gray-300 text-lg font-semibold uppercase"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import {
+  carPartTabs,
+  carPartAdditionalInformation,
+  carPartReviewPerson,
+} from "@/store/data";
+import CarPartsAdditionalInformation from "./CarPartsAdditionalInformation.vue";
+
 export default {
   data() {
     return {
-      activeIndex: 1,
+      activeIndex: 3,
+      carPartTabs,
+      carPartAdditionalInformation,
+      carPartReviewPerson,
     };
+  },
+
+  components: {
+    CarPartsAdditionalInformation,
   },
   methods: {
     activeTabs(i) {

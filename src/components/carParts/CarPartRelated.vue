@@ -1,6 +1,6 @@
 <template>
   <div class="block w-full h-auto">
-    <h2 class="text-2xl font-bold text-black text-start mb-3 uppercase">
+    <h2 class="text-2xl font-bold text-black text-start my-3 uppercase">
       Related products
     </h2>
     <CarPartCard :parts="parts" />

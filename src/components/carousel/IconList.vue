@@ -52,7 +52,6 @@ export default {
       const letterCount = text.replace(/ /g, "").length; // Count letters
       const spaceCount = (text.match(/ /g) || []).length; // Count spaces
       const totalLength = letterCount + spaceCount;
-      console.log(totalLength);
       const additionalWidth = totalLength * 12 + 5; // Add 12px for each word/space
       return additionalWidth;
     },

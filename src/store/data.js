@@ -545,3 +545,38 @@ export const carParts = [
     value: 233,
   },
 ];
+
+export const carPartTabs =[
+  {
+    id:1,
+    title:'Description',
+    value:'Description'
+  },
+  {
+    id:2,
+    title:'Additional information',
+    value:'Additional_information'
+  },
+  {
+    id:3,
+    title:'Reviews',
+    value:'Reviews'
+  },
+]
+
+export const carPartAdditionalInformation = [
+  { id: 1, title: "Year", value: ["2010", "2011"] },
+  { id: 2, title: "Make", value: ["Chevy", "Ford"] },
+  { id: 3, title: "Model", value: ["Explorer", "F-150", "Focus", "Impala", "Silverado"] },
+  { id: 4, title: "Color", value: ["Black", "Gray"] },
+  { id: 5, title: "Engraving", value: ["No", "Yes"] }
+];
+
+export const carPartReviewPerson = {
+  name: "John Miller",
+  date: "April 25, 2017",
+  note: "Should be installed professionally",
+  image: require("@/assets/man2.png")
+};
+
+
