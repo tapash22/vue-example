@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <div class="flex justify-between items-center w-full" v-else>
+      <div class="flex justify-start items-center w-full" v-else>
         <div class="block w-1/2 h-auto p-4">
           <h2 class="text-xl font-bold text-black text-start mb-3 uppercase">
             {{ about.title }}
@@ -50,7 +50,7 @@
             </li>
           </ul>
         </div>
-        <div class="w-1/2">
+        <div class="w-1/2 flex justify-end">
           <img :src="about.image" class="bg-cover bg-center" />
         </div>
       </div>

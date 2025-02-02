@@ -19,15 +19,15 @@
           <span @click="openForm" class="span cursor-pointer">Contact</span>
         </li>
         <li class="li px-2">
-          <select>
-            <option class="span" selected>English</option>
-            <option class="span">Bangle</option>
+          <select class="h-10 px-2 py-2 text-lg font-medium">
+            <option class="span py-2 text-lg font-medium" selected>English</option>
+            <option class="span py-2 text-lg font-medium">Bangle</option>
           </select>
         </li>
-        <li class="li px-2 border-r-2">
-          <select>
-            <option class="span" selected>Doller</option>
-            <option class="span">Taka</option>
+        <li class="li px-2 border-r-2 rounded-lg">
+          <select class="h-10 py-2 px-2 text-lg font-medium">
+            <option class="span py-2 text-lg font-medium" selected>Doller</option>
+            <option class="span py-2 text-lg font-medium">Taka</option>
           </select>
         </li>
       </ul>

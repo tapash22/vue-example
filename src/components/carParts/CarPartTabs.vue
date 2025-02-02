@@ -36,27 +36,27 @@
     </div>
     <div class="px-3 py-2 ease-in-out" v-else>
       <div class="block">
-        <h2 class="text-xl font-normal text-black text-start uppercase">
-          review for OE Replacement Calipers
+        <h2 class="text-xl font-normal text-black text-start uppercase py-2">
+        {{ localData && localData.length }}  review for OE Replacement Calipers
         </h2>
-        <div class="py-4 flex justify-start items-center">
-          <div class="flex justify-start items-center w-auto">
-            <img :src="carPartReviewPerson.image" class="w-32 h-24" />
+        <div class="py-2 flex justify-start items-center" v-for="localreview in localData" :key="localreview">
+          <div class="flex justify-start items-center w-auto ">
+            <img :src="carPartReviewPerson.image" class="w-32 h-12" />
           </div>
           <div class="flex justify-start items-center w-full">
             <div class="block w-full px-2">
-              <p class="text-lg font-light text-black">
-                {{ carPartReviewPerson.name }} - {{ carPartReviewPerson.date }}
+              <p class="text-lg font-medium text-black">
+                {{ localreview.name }} - {{ localreview.date }}
               </p>
-              <p class="text-lg font-light text-black">
-                {{ carPartReviewPerson.note }}
+              <p class="text-sm font-semibold text-black">
+                {{ localreview.note }}
               </p>
             </div>
           </div>
         </div>
 
         <div class="py-4 flex justify-start items-center w-full">
-          <form class="block w-full">
+          <form class="block w-full" @submit.prevent="addNewComment()">
             <h2 class="text-2xl font-normal text-black">Add a review</h2>
             <div class="block w-full my-2">
               <div class="flex justify-start items-center gap-4">
@@ -67,6 +67,7 @@
                   <input
                     class="w-full ring-1 ring-gray-300 rounded-full h-12 px-3 text-xl font-medium text-black text-start"
                     type="text"
+                    v-model="name"
                   />
                 </div>
                 <div class="block w-1/2">
@@ -76,6 +77,7 @@
                   <input
                     class="w-full ring-1 ring-gray-300 rounded-full h-12 px-3 text-xl font-medium text-black text-start"
                     type="text"
+                    v-model="email"
                   />
                 </div>
               </div>
@@ -86,17 +88,21 @@
                 <textarea
                   class="w-full ring-1 ring-gray-300 rounded-lg h-24 px-3 py-2 text-xl font-medium text-black text-start"
                   type="text"
+                  v-model="review"
                 />
               </div>
               <div class="flex justify-start w-full py-3 px-2">
-                <input type="checkbox" class="" />
+                <input type="checkbox" class="" v-model="reviewCheck" />
                 <p class="text-sm font-light text-gray-500 px-2">
-                  I agree that my submitted data is being collected and stored. For further details on handling user data, see our Privacy Policy.
+                  I agree that my submitted data is being collected and stored.
+                  For further details on handling user data, see our Privacy
+                  Policy.
                 </p>
               </div>
               <div class="flex justify-start w-full py-2">
                 <button
                   class="px-4 py-3 rounded-full bg-gray-300 text-lg font-semibold uppercase"
+                  type="submit"
                 >
                   Submit
                 </button>
@@ -124,15 +130,60 @@ export default {
       carPartTabs,
       carPartAdditionalInformation,
       carPartReviewPerson,
+      name:'',
+      email:'',
+      review:'',
+      reviewCheck:false,
+      localData: [],
     };
   },
 
   components: {
     CarPartsAdditionalInformation,
   },
+
+  created(){
+    this.loadLocalData()
+  },
   methods: {
     activeTabs(i) {
       this.activeIndex = i;
+    },
+
+    loadLocalData() {
+      const storedData = localStorage.getItem("myLocalData");
+      if (storedData) {
+        this.localData = JSON.parse(storedData);
+      } else {
+        this.localData = myData;
+        this.saveLocalData();
+      }
+    },
+
+    saveLocalData() {
+      localStorage.setItem("myLocalData", JSON.stringify(this.localData));
+    },
+
+    getFormattedDate() {
+      const date = new Date();
+      return date.toLocaleDateString("en-US", {
+        month: "numeric",
+        day: "numeric",
+        year: "2-digit"
+      }); 
+    },
+
+    addNewComment() {
+      const newReview = {
+        id: this.localData.length + 1,
+        name: this.name,
+        date: this.getFormattedDate(),
+        note: this.review,
+        check:this.reviewCheck,
+        image: require("@/assets/man2.png"),
+      };
+      this.localData.push(newReview);
+      this.saveLocalData();
     },
   },
 };

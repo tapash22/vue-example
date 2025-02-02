@@ -9,49 +9,49 @@
       Select your vehicle
     </h2>
     <div
-      class="search block sm:block md:flex lg:flex xl:flex gap-2 justify-center w-full"
+      class="search block sm:block md:flex lg:flex xl:flex gap-1 justify-center w-full"
     >
       <div
-        class="h-24 ring-4 ring-blue-100 items-center w-full sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12 overflow-hidden rounded-lg"
+        class="h-24 ring-4 ring-white items-center w-full sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12 overflow-hidden rounded-lg"
       >
         <select
-          class="h-full w-full bg-white text-lg font-medium tracking-wider text-center overflow-hidden"
+          class="h-full w-full bg-white font-bold text-2xl tracking-wider text-center overflow-hidden"
         >
           <option selected class="font-bold text-2xl">Select year</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option class="font-bold text-2xl" value="1">One</option>
+          <option class="font-bold text-2xl" value="2">Two</option>
+          <option class="font-bold text-2xl" value="3">Three</option>
         </select>
       </div>
       <div
-        class="h-24 ring-4 ring-blue-100 items-center w-full sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12 overflow-hidden rounded-lg"
+        class="h-24 ring-2 ring-white items-center w-full sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12 overflow-hidden rounded-lg"
       >
         <select
-          class="h-full w-full bg-white text-lg font-medium tracking-wider text-center overflow-hidden"
+          class="h-full w-full bg-white font-bold text-2xl tracking-wider text-center overflow-hidden"
         >
           <option selected class="font-bold text-2xl">Select Brand</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option class="font-bold text-2xl" value="1">One</option>
+          <option class="font-bold text-2xl" value="2">Two</option>
+          <option class="font-bold text-2xl" value="3">Three</option>
         </select>
       </div>
       <div
-        class="h-24 ring-4 ring-blue-100 items-center w-full sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12 overflow-hidden rounded-lg"
+        class="h-24 ring-2 ring-white items-center w-full sm:w-full md:w-3/12 lg:w-3/12 xl:w-3/12 overflow-hidden rounded-lg"
       >
         <select
-          class="h-full w-full bg-white text-lg font-medium tracking-wider text-center overflow-hidden"
+          class="h-full w-full bg-white tracking-wider text-center font-bold text-2xl overflow-hidden"
         >
           <option selected class="font-bold text-2xl">Select Model</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option  class="font-bold text-2xl py-1" value="1">One</option>
+          <option class="font-bold text-2xl py-1" value="2">Two</option>
+          <option class="font-bold text-2xl py-1" value="3">Three</option>
         </select>
       </div>
       <div
-        class="h-24 flex justify-center bg-blue-100 ring-4 ring-blue-100 sm:w-full md:w-1/12 lg:w-1/12 xl:w-1/12 rounded-xl"
+        class="h-24 flex justify-center bg-blue-100 ring-2 ring-white sm:w-full md:w-1/12 lg:w-1/12 xl:w-1/12 rounded-r-xl"
       >
         <button
-          class="bg-transparent h-full text-2xl font-medium tracking-wider text-center text-black uppercase"
+          class="bg-transparent text-2xl font-bold tracking-wider text-center text-black uppercase"
         >
           GO
         </button>
