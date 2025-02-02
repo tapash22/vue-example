@@ -16,7 +16,9 @@
           <router-link to="/about" class="span">About</router-link>
         </li>
         <li class="li px-2">
-          <span @click="openForm" class="span cursor-pointer">Contact</span>
+          <router-link to="/contact" class="span">Contact</router-link>
+
+          <!-- <span @click="openForm" class="span cursor-pointer">Contact</span> -->
         </li>
         <li class="li px-2">
           <select class="h-10 px-2 py-2 text-lg font-medium">
