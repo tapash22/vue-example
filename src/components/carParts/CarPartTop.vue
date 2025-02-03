@@ -1,25 +1,6 @@
 <template>
   <div class="w-full h-auto flex justify-between align-middle">
-    <div class="w-2/6 h-auto p-2 block">
-      <img
-        src="@/assets/part.png"
-        class="w-full h-auto bg-cover bg-center bg-white shadow-lg shadow-gray-300 rounded-lg"
-      />
-      <div class="flex justify-start items-center p-2 gap-3">
-        <img
-          src="@/assets/part1.png"
-          class="w-1/3 h-32 bg-cover bg-center bg-white p-2 rounded-lg opacity-80"
-        />
-        <img
-          src="@/assets/part2.png"
-          class="w-1/3 h-32 bg-cover bg-center bg-white p-2 rounded-lg opacity-60"
-        />
-        <img
-          src="@/assets/part3.png"
-          class="w-1/3 h-32 bg-cover bg-center bg-white p-2 rounded-lg opacity-60"
-        />
-      </div>
-    </div>
+   <CarPartsDetailsImage />
     <div class="w-4/6 h-auto p-2 block">
       <h1 class="text-3xl font-bold px-5 text-black">$195.00 – $295.00</h1>
       <form class="w-full h-auto p-2">
@@ -79,7 +60,7 @@
             <option class="w-full h-20 py-1">No</option>
           </select>
         </div>
-        <div class="flex justify-start items-center gap-4 px-4 py-3">
+        <div class="flex justify-start items-center gap-3 px-4 py-3">
           <div
             class="flex justify-start items-center rounded-lg ring-1 w-24 h-12 p-1"
           >
@@ -107,33 +88,15 @@
           </button>
         </div>
       </form>
-      <ul class="px-3 w-full h-auto block">
-        <li
-          class="w-full h-auto py-2 flex justify-start items-center gap-2"
-          v-for="carP in carParts"
-          :key="carP.id"
-        >
-          <span class=" h-auto text-lg font-semibold text-black w-auto whitespace-normal">
-            {{ carP.title }}
-          </span>
-          :
-          <span class="w-full flex justify-start items-center h-auto text-lg font-normal text-black " v-if="typeof carP.value === 'string' || typeof carP.value === 'number'" >
-            {{ carP.value }}
-          </span>
-          <span class="w-full flex justify-start items-center h-auto text-lg font-normal text-black gap-2" v-else>
-            <span v-for="carV in carP.value" :key="carV" class="gap-3">
-
-              {{ carV }} ,
-            </span>
-          </span>
-        </li>
-      </ul>
+      <CarPartsInfo :car-parts="carParts" />
     </div>
   </div>
 </template>
 
 <script>
 import { carParts } from "@/store/data";
+import CarPartsDetailsImage from "./CarPartsDetailsImage.vue";
+import CarPartsInfo from "./CarPartsInfo.vue";
 
 export default {
   data() {
@@ -141,6 +104,11 @@ export default {
       count: 1,
       carParts,
     };
+  },
+
+  components:{
+    CarPartsDetailsImage,
+    CarPartsInfo
   },
 
   methods: {
@@ -151,5 +119,16 @@ export default {
       this.count--;
     },
   },
+
+  watch: {
+  $route() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+}
+
+
 };
 </script>
