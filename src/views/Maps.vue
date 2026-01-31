@@ -1,7 +1,6 @@
 <template>
   <div class="maps">
-
-    <p>Mouse position: {{ mouseX }}, {{ mouseY }}</p> 
+    <p>Mouse position: {{ mouseX }}, {{ mouseY }}</p>
     <svg
       id="chart"
       viewBox="0 0 432 488"
@@ -551,12 +550,9 @@
           title="Thane"
           @mouseover="getInfo"
         >
-          
           <title>Name -{{ title }} Farmers -{{ farmers_count }}</title>
         </path>
-        <text x="25" y="220" font-size="8" fill="black">
-          Label 6
-        </text>
+        <text x="25" y="220" font-size="8" fill="black">Label 6</text>
       </g>
       <g class="state-borders" fill="none" stroke-width="1.5" />
 
@@ -566,9 +562,12 @@
     <div class="popup" v-if="showView">
       <h2>{{ title }}</h2>
       <p>Farmers: {{ farmers_count }}</p>
+      <!-- <Map />llll -->
+      lll
+      <CountryMap />
     </div>
 
-    <div
+    <!-- <div
       v-if="cardOpen"
       style="z-index: 99"
       class="flex justify-center align-middle"
@@ -598,12 +597,13 @@
           </div>
         </div>
       </div>
-    </div>
-
+    </div> -->
   </div>
 </template>
 
 <script>
+import CountryMap from "@/components/map/CountryMap.vue";
+import Map from "@/components/map/Map.vue";
 export default {
   data() {
     return {
@@ -615,6 +615,10 @@ export default {
       mouseX: 0,
       mouseY: 0,
     };
+  },
+  components: {
+    Map,
+    CountryMap,
   },
 
   mounted() {

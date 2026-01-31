@@ -1,0 +1,104 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "adm1_name": "Dhaka"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            90.1,
+                            23.5
+                        ],
+                        [
+                            90.8,
+                            23.5
+                        ],
+                        [
+                            90.8,
+                            24.2
+                        ],
+                        [
+                            90.1,
+                            24.2
+                        ],
+                        [
+                            90.1,
+                            23.5
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "adm1_name": "Barishal"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            89.8,
+                            22.1
+                        ],
+                        [
+                            90.5,
+                            22.1
+                        ],
+                        [
+                            90.5,
+                            23.0
+                        ],
+                        [
+                            89.8,
+                            23.0
+                        ],
+                        [
+                            89.8,
+                            22.1
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "adm1_name": "Rangpur"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            88.2,
+                            25.4
+                        ],
+                        [
+                            89.2,
+                            25.4
+                        ],
+                        [
+                            89.2,
+                            26.3
+                        ],
+                        [
+                            88.2,
+                            26.3
+                        ],
+                        [
+                            88.2,
+                            25.4
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

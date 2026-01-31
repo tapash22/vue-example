@@ -17,14 +17,14 @@
   </div>
 </template>
 <script>
-import { carDetails,optionData } from "@/store/data";
+// import { carDetails,optionData } from "@/store/data";
 import CarDetailLeftSide from "@/components/feature/CarDetailLeftSide.vue";
 import CarDetailRightSide from "@/components/feature/CarDetailRightSide.vue";
 
 export default {
   data() {
     return {
-      optionData,
+      // optionData,
       buy_car_with_emi: {
         vechile_price: 32000,
         emi_percent: 3,
